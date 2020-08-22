@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "Clocks were turned back 1 hour from 2:00 am to 1:00 am";
 		public override string Name => "End of Daylight Savings Time";
 		public override string ObservanceRule => "November 1st";
-		public override bool IsFederal => true;
 	}
 }

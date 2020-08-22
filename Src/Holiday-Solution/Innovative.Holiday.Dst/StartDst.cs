@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "Clocks were turned forward 1 hour from 2:00 am to 3:00 am";
 		public override string Name => "Start of Daylight Savings Time";
 		public override string ObservanceRule => "March 8th";
-		public override bool IsFederal => true;
 	}
 }

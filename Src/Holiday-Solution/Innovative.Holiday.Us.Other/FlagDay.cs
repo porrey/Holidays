@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "Commemorates the adoption of the flag of the United States, in 1777.";
 		public override string Name => "Flag Day";
 		public override string ObservanceRule => "June 14th";
-		public override bool IsFederal => false;
 	}
 }

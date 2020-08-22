@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "A day to honors mothers and motherhood.";
 		public override string Name => "Mother's Day";
 		public override string ObservanceRule => "Second Sunday of May";
-		public override bool IsFederal => false;
 	}
 }

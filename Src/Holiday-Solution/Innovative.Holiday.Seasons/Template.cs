@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "";
 		public override string Name => "";
 		public override string ObservanceRule => "";
-		public override bool IsFederal => true;
 	}
 }

@@ -6,6 +6,8 @@ namespace Innovative.DateInterval
 	{
 		DateTime NextDateTime { get; }
 		DateTime this[int index] { get; }
-		DateTime GetAtInterval(int index);
+		DateTime GetByIndex(int index);
+		DateTime GetByYear(int year);
+		int GetYearIndex(int year);
 	}
 }

@@ -24,9 +24,24 @@ namespace Innovative.DateInterval
 			}
 		}
 
-		public virtual DateTime GetAtInterval(int index)
+		public virtual DateTime GetByIndex(int index)
 		{
 			return this[index];
+		}
+
+		public virtual DateTime GetByYear(int year)
+		{
+			return this[this.GetYearIndex(year)];
+		}
+
+		public virtual int GetYearIndex(int year)
+		{
+			int returnValue = 0;
+
+			int nextHolidayYear = this.NextDateTime.Year;
+			returnValue = year - nextHolidayYear;
+
+			return returnValue;
 		}
 		#endregion
 

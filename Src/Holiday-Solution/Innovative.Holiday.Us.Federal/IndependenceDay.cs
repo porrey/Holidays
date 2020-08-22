@@ -3,7 +3,7 @@ using Innovative.DateInterval;
 
 namespace Innovative.Holiday
 {
-	public class IdependanceDay : Holiday
+	public class IndependenceDay : FederalHoliday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("7/4");
 
@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "Celebrates the adoption of the Declaration of Independence. Also popularly known as the Fourth of July.";
 		public override string Name => "Independence Day";
 		public override string ObservanceRule => "July 4th";
-		public override bool IsFederal => true;
 	}
 }

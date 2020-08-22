@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "The day on which folklore states that the behavior of a groundhog emerging from its burrow is said to predict the onset of Spring.";
 		public override string Name => "Groundhog Day";
 		public override string ObservanceRule => "February 2nd";
-		public override bool IsFederal => false;
 	}
 }

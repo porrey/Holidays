@@ -3,7 +3,7 @@ using Innovative.DateInterval;
 
 namespace Innovative.Holiday
 {
-	public class NewYearsDay : Holiday
+	public class NewYearsDay : FederalHoliday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("1/1");
 
@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "Celebrates beginning of the calendar year.";
 		public override string Name => "New Year's Day";
 		public override string ObservanceRule => "January 1st";
-		public override bool IsFederal => true;
 	}
 }

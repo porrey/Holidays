@@ -24,6 +24,5 @@ namespace Innovative.Holiday
 		public override string Description => "Celebration of the resurrection of Jesus.";
 		public override string Name => "Easter";
 		public override string ObservanceRule => "Sunday following the Paschal Full Moon";
-		public override bool IsFederal => false;
 	}
 }

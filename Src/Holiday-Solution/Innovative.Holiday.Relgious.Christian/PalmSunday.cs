@@ -17,6 +17,5 @@ namespace Innovative.Holiday
 		public override string Description => "Celebration to commemorate the entry of Jesus into Jerusalem.";
 		public override string Name => "Palm Sunday";
 		public override string ObservanceRule => "Sunday before Easter";
-		public override bool IsFederal => false;
 	}
 }

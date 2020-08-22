@@ -11,38 +11,27 @@ namespace Innovative.Holiday
 
 		public abstract string ObservanceRule { get; }
 
-		public abstract bool IsFederal { get; }
-
 		public virtual DateTime NextObservedDateTime
 		{
 			get
 			{
-				return this.GetObservedAtInterval(0);
+				return this.GetByIndex(0);
 			}
 		}
 
-		public virtual DateTime GetObservedAtInterval(int index)
+		public virtual DateTime GetObservedByIndex(int index)
 		{
-			DateTime returnValue = this.NextDateTime;
+			return this.GetByIndex(index);
+		}
 
-			// ***
-			// *** If the holiday is a Federal Holiday and it falls on Saturday then it is 
-			// *** observed on Friday. If it falls on Sunday it is observed on Monday. If
-			// *** it is not a federal holiday then it is observed on the same day.
-			// ***
-			if (this.IsFederal)
-			{
-				if (this.NextDateTime.DayOfWeek == DayOfWeek.Saturday)
-				{
-					returnValue = this.NextDateTime.Subtract(TimeSpan.FromDays(1));
-				}
-				else if (this.NextDateTime.DayOfWeek == DayOfWeek.Sunday)
-				{
-					returnValue = this.NextDateTime.Add(TimeSpan.FromDays(1));
-				}
-			}
+		public virtual DateTime GetObservedByYear(int year)
+		{
+			return this.GetByYear(year);
+		}
 
-			return returnValue;
+		public override string ToString()
+		{
+			return $"{this.Name} [{this.NextDateTime.ToFullFormat()}]";
 		}
 	}
 }

@@ -37,8 +37,15 @@ namespace System
 			{
 				if (behavior == SpecificDayBehavior.AdjustForLast)
 				{
-					if (day < 1) day = 1;
-					if (day > maximumDays) day = maximumDays;
+					if (day < 1)
+					{
+						day = 1;
+					}
+
+					if (day > maximumDays)
+					{
+						day = maximumDays;
+					}
 				}
 				else
 				{
@@ -63,7 +70,7 @@ namespace System
 
 			if (newDay > 7)
 			{
-				newDay = newDay % 7;
+				newDay %= 7;
 			}
 
 			returnValue = (DayOfWeek)(newDay - 1);

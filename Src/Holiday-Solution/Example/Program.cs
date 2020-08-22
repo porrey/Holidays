@@ -7,6 +7,12 @@ namespace Example
 	{
 		static void Main(string[] args)
 		{
+			Holidays.ObservedHolidays.AddRange(Innovative.Holiday.Us.Federal.All.Items);
+			Holidays.ObservedHolidays.Add(new Christmas());
+
+			DateTime d = new DateTime(2020, 7, 4);
+			bool isHoliday = d.IsHoliday(HolidayOccurrenceType.Any);
+
 			LaborDay ld = new LaborDay();
 			DateTime dt1 = ld.NextObservedDateTime;
 

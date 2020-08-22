@@ -17,6 +17,5 @@ namespace Innovative.Holiday
 		public override string Description => "Friday of Holy Week, when Western Christians commemorate the crucifixion and death of Jesus.";
 		public override string Name => "Good Friday";
 		public override string ObservanceRule => "Friday (2 days) before Easter";
-		public override bool IsFederal => false;
 	}
 }

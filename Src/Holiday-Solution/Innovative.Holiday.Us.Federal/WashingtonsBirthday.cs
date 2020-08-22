@@ -3,7 +3,7 @@ using Innovative.DateInterval;
 
 namespace Innovative.Holiday
 {
-	public class WashingtonsBirthday : Holiday
+	public class WashingtonsBirthday : FederalHoliday
 	{
 		private readonly IDateTimeInterval _calculator = new Nth(Ordinal.Third, Division.Monday, Period.February);
 
@@ -11,6 +11,5 @@ namespace Innovative.Holiday
 		public override string Description => "Honors George Washington. Sometimes labeled as Presidents Day.";
 		public override string Name => "Washington's Birthday";
 		public override string ObservanceRule => "Third Monday of February";
-		public override bool IsFederal => true;
 	}
 }
