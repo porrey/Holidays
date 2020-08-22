@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1</TargetFrameworks>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<RepositoryUrl>https://github.com/porrey/Holidays</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/porrey/Holidays</PackageProjectUrl>
+		<Copyright>Copyright © 2013-2020</Copyright>
+		<Authors>Daniel M. Porrey</Authors>
+		<Company>Daniel M. Porrey</Company>
+		<Description>Allows the creation of date intervals such as every 3rd Monday of the month.</Description>
+		<NeutralLanguage>en-US</NeutralLanguage>
+	</PropertyGroup>
+</Project>

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1</TargetFrameworks>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>Daniel M. Porrey</Authors>
+		<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/porrey/Holidays</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/porrey/Holidays</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<Description>Provides a set of holiday definitions based on date intervals and rules to calculate past and furture ocurrences of each holiday. Additional holidays can be defined.</Description>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
+	</ItemGroup>
+
+</Project>
