@@ -1,4 +1,6 @@
-﻿namespace System
+﻿using Innovative.SystemTime;
+
+namespace System
 {
 	public enum SpecificDayBehavior
 	{

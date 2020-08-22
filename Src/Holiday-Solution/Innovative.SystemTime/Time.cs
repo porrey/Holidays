@@ -1,4 +1,6 @@
-﻿namespace System
+﻿using System;
+
+namespace Innovative.SystemTime
 {
 	public struct Time : IComparable, IFormattable, IComparable<Time>, IEquatable<Time>
 	{

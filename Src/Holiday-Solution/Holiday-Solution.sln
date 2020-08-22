@@ -13,13 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Feder
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Other", "Innovative.Holiday.Us.Other\Innovative.Holiday.Us.Other.csproj", "{56212D53-F519-4CED-B76E-56BEEE20AF26}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "System.Time", "System.Time\System.Time.csproj", "{5E9AC9F9-8476-47FA-B2D9-8A2500E485DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.SystemTime", "Innovative.SystemTime\Innovative.SystemTime.csproj", "{5E9AC9F9-8476-47FA-B2D9-8A2500E485DC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Relgious.Christian", "Innovative.Holiday.Relgious.Christian\Innovative.Holiday.Relgious.Christian.csproj", "{CF145431-A735-4DA5-A6B5-28A8E30AAEC9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Dst", "Innovative.Holiday.Dst\Innovative.Holiday.Dst.csproj", "{573C9D9D-2472-4FE9-AD43-A46BE1603D1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Seasons", "Innovative.Holiday.Seasons\Innovative.Holiday.Seasons.csproj", "{360D31B4-5F87-43C6-80D1-ABB16E10FEA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Seasons", "Innovative.Holiday.Seasons\Innovative.Holiday.Seasons.csproj", "{360D31B4-5F87-43C6-80D1-ABB16E10FEA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
