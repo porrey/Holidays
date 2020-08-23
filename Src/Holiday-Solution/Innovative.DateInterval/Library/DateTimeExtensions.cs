@@ -12,12 +12,7 @@ namespace System
 	{
 		public static string ToFullFormat(this DateTime item)
 		{
-			return string.Format("{0} at {1}", item.ToLongDateString(), item.ToLongTimeString());
-		}
-
-		public static string ToDescriptiveFormat(this DateTime item)
-		{
-			return string.Format("{0} at {1}", item.ToLongDateString(), item.ToLongTimeString());
+			return String.Format("{0} at {1}", item.ToLongDateString(), item.ToLongTimeString());
 		}
 
 		public static DateTime SpecifyDayOfMonth(this DateTime item, int day, SpecificDayBehavior behavior)
