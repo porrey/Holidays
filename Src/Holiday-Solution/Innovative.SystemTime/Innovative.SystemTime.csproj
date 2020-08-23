@@ -9,9 +9,9 @@
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>A type specific to string based time.</Description>
-		<Version>2.1.1</Version>
-		<FileVersion>2.1.1</FileVersion>
-		<AssemblyVersion>2.1.1</AssemblyVersion>
+		<Version>2.1.2</Version>
+		<FileVersion>2.1.2</FileVersion>
+		<AssemblyVersion>2.1.2</AssemblyVersion>
 		<PackageIcon>time.png</PackageIcon>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>

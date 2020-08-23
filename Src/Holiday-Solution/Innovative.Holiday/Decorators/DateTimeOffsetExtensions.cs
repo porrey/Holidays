@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Innovative.Holiday
@@ -35,7 +36,7 @@ namespace Innovative.Holiday
 
 		public static bool IsHoliday(this DateTimeOffset value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
-			return (value.GetHoliday(holidayOccurrenceType) != null);
+			return value.GetHoliday(holidayOccurrenceType).Any();
 		}
 
 		public static Task<bool> IsHolidayAsync(this DateTimeOffset value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
