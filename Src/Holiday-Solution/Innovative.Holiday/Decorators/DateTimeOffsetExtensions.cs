@@ -16,6 +16,23 @@ namespace Innovative.Holiday
 			return Task.FromResult(value.GetHoliday(holidayOccurrenceType));
 		}
 
+		public static IEnumerable<IHoliday> GetHoliday(this DateTimeOffset? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
+		{
+			IEnumerable<IHoliday> returnValue = new IHoliday[0];
+
+			if (value.HasValue)
+			{
+				returnValue = value.Value.GetHoliday(holidayOccurrenceType);
+			}
+
+			return returnValue;
+		}
+
+		public static Task<IEnumerable<IHoliday>> GetHolidayAsync(this DateTimeOffset? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
+		{
+			return Task.FromResult(value.GetHoliday(holidayOccurrenceType));
+		}
+
 		public static bool IsHoliday(this DateTimeOffset value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
 			return (value.GetHoliday(holidayOccurrenceType) != null);
@@ -42,6 +59,5 @@ namespace Innovative.Holiday
 		{
 			return Task.FromResult(value.IsHoliday(holidayOccurrenceType));
 		}
-
 	}
 }

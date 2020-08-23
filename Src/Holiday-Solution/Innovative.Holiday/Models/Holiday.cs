@@ -31,7 +31,7 @@ namespace Innovative.Holiday
 
 		public override string ToString()
 		{
-			return $"{this.Name} [{this.NextDateTime.ToFullFormat()}]";
+			return $"{this.Name} [{this.NextDateTime.ToLongDateString()}]";
 		}
 	}
 }

@@ -38,6 +38,23 @@ namespace Innovative.Holiday
 			return Task.FromResult(value.GetHoliday(holidayOccurrenceType));
 		}
 
+		public static IEnumerable<IHoliday> GetHoliday(this DateTime? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
+		{
+			IEnumerable<IHoliday> returnValue = new IHoliday[0];
+
+			if (value.HasValue)
+			{
+				returnValue = value.Value.GetHoliday(holidayOccurrenceType);
+			}
+
+			return returnValue;
+		}
+
+		public static Task<IEnumerable<IHoliday>> GetHolidayAsync(this DateTime? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
+		{
+			return Task.FromResult(value.GetHoliday(holidayOccurrenceType));
+		}
+
 		public static bool IsHoliday(this DateTime value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
 			return (value.GetHoliday(holidayOccurrenceType).Any());

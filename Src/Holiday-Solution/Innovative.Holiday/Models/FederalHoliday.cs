@@ -47,7 +47,7 @@ namespace Innovative.Holiday
 
 		public override string ToString()
 		{
-			return $"{this.Name} [{this.NextDateTime.ToFullFormat()}] [Federal]";
+			return $"{this.Name} [Federal holiday on {this.NextDateTime.ToLongDateString()}]";
 		}
 	}
 }

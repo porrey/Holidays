@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Innovative.Holiday;
 
 namespace Example
@@ -10,17 +11,10 @@ namespace Example
 			Holidays.ObservedHolidays.AddRange(Innovative.Holiday.Us.Federal.All.Items);
 			Holidays.ObservedHolidays.Add(new Christmas());
 
-			DateTime d = new DateTime(2020, 7, 4);
-			bool isHoliday = d.IsHoliday(HolidayOccurrenceType.Any);
+			DateTimeOffset? dt = new DateTimeOffset(new DateTime(2020, 9, 7), TimeSpan.FromHours(-5));
 
-			LaborDay ld = new LaborDay();
-			DateTime dt1 = ld.NextObservedDateTime;
-
-			GoodFriday gf = new GoodFriday();
-			DateTime dt2 = gf.NextObservedDateTime;
-
-			EasterSunday es = new EasterSunday();
-			DateTime dt3 = es.NextObservedDateTime;
+			bool isHoliday = dt.IsHoliday(HolidayOccurrenceType.Observed);
+			IEnumerable<IHoliday> holidays = dt.GetHoliday(HolidayOccurrenceType.Observed);
 		}
 	}
 }
