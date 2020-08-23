@@ -12,9 +12,9 @@
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Provides a set of holiday definitions for US federal holidays.</Description>
 		<PackageIcon>holiday-us-federal.png</PackageIcon>
-		<Version>2.1.0</Version>
-		<FileVersion>2.1.0</FileVersion>
-		<AssemblyVersion>2.1.0</AssemblyVersion>
+		<Version>2.1.1</Version>
+		<FileVersion>2.1.1</FileVersion>
+		<AssemblyVersion>2.1.1</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
