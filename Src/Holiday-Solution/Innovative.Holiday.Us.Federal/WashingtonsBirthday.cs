@@ -12,4 +12,8 @@ namespace Innovative.Holiday
 		public override string Name => "Washington's Birthday";
 		public override string ObservanceRule => "Third Monday of February";
 	}
+
+	public class PresidentsDay : WashingtonsBirthday
+	{
+	}
 }

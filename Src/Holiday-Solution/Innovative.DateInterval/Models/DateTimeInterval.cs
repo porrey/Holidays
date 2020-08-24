@@ -31,7 +31,8 @@ namespace Innovative.DateInterval
 
 		public virtual DateTime GetByYear(int year)
 		{
-			return this[this.GetYearIndex(year)];
+			int index = this.GetYearIndex(year);
+			return this[index];
 		}
 
 		public virtual int GetYearIndex(int year)

@@ -20,27 +20,7 @@ namespace Innovative.DateInterval
 
 			if (DateTime.TryParse(this.Value, out returnValue))
 			{
-				// ***
-				// *** Always return the full date of 
-				// *** next occurrence of the time
-				// *** value for index 0
-				// **
-				if (returnValue < DateTime.Now)
-				{
-					// ***
-					// *** Set the date and time to the next
-					// *** time slot
-					// ***
-					while (returnValue < DateTime.Now)
-					{
-						returnValue = returnValue.AddYears(1);
-					}
-
-					// ***
-					// *** Add the years
-					// ***
-					returnValue = returnValue.AddYears(index);
-				}
+				returnValue = returnValue.AddYears(index);
 			}
 			else
 			{
@@ -57,12 +37,7 @@ namespace Innovative.DateInterval
 
 		protected override bool OnGetIsValidRange(string value)
 		{
-			bool returnValue = false;
-
-			DateTime d = DateTime.MinValue;
-			returnValue = DateTime.TryParse(value, out d);
-
-			return returnValue;
+			return DateTime.TryParse(value, out DateTime _);
 		}
 
 		#region IDateTimeIntervalConverter

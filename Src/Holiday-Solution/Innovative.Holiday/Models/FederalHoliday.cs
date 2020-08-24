@@ -33,13 +33,13 @@ namespace Innovative.Holiday
 			// *** observed on Friday. If it falls on Sunday it is observed on Monday. If
 			// *** it is not a federal holiday then it is observed on the same day.
 			// ***
-			if (this.NextDateTime.DayOfWeek == DayOfWeek.Saturday)
+			if (value.DayOfWeek == DayOfWeek.Saturday)
 			{
-				returnValue = this.NextDateTime.Subtract(TimeSpan.FromDays(1));
+				returnValue = value.Subtract(TimeSpan.FromDays(1));
 			}
-			else if (this.NextDateTime.DayOfWeek == DayOfWeek.Sunday)
+			else if (value.DayOfWeek == DayOfWeek.Sunday)
 			{
-				returnValue = this.NextDateTime.Add(TimeSpan.FromDays(1));
+				returnValue = value.Add(TimeSpan.FromDays(1));
 			}
 
 			return returnValue;

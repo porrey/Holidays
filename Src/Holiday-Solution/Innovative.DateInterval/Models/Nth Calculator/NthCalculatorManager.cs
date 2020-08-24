@@ -65,11 +65,11 @@ namespace Innovative.DateInterval
 		{
 			bool returnValue = false;
 
-			var qry = from tbl in NthCalculatorManager.ValidCombinations
-					  where tbl.Period == period &&
-					  tbl.Division == division &&
-					  tbl.N.Contains(n)
-					  select tbl;
+			IEnumerable<Combination> qry = from tbl in NthCalculatorManager.ValidCombinations
+										   where tbl.Period == period &&
+										   tbl.Division == division &&
+										   tbl.N.Contains(n)
+										   select tbl;
 
 			returnValue = (qry.Count() > 0);
 
@@ -83,10 +83,10 @@ namespace Innovative.DateInterval
 			// ***
 			// *** Get the entry in the list
 			// ***
-			var qry = from tbl in NthCalculatorManager.ValidCombinations
-					  where tbl.Period == period &&
-					  tbl.Division == division					  
-					  select tbl;
+			IEnumerable<Combination> qry = from tbl in NthCalculatorManager.ValidCombinations
+										   where tbl.Period == period &&
+										   tbl.Division == division
+										   select tbl;
 
 			if (qry.Count() == 1)
 			{

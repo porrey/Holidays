@@ -21,6 +21,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Dst", "I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Seasons", "Innovative.Holiday.Seasons\Innovative.Holiday.Seasons.csproj", "{360D31B4-5F87-43C6-80D1-ABB16E10FEA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Tests", "Innovative.Holiday.Tests\Innovative.Holiday.Tests.csproj", "{CDB63739-FD1C-4CC6-8836-0C8880D74E55}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0976512C-8CBA-43DD-ACA6-78F03FA50550}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Us.Federal.Tests", "Innovative.Holiday.Us.Federal.Tests\Innovative.Holiday.Us.Federal.Tests.csproj", "{C3DAB172-D0B9-404C-8F9E-6862171404EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,9 +69,21 @@ Global
 		{360D31B4-5F87-43C6-80D1-ABB16E10FEA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{360D31B4-5F87-43C6-80D1-ABB16E10FEA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{360D31B4-5F87-43C6-80D1-ABB16E10FEA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDB63739-FD1C-4CC6-8836-0C8880D74E55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB63739-FD1C-4CC6-8836-0C8880D74E55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB63739-FD1C-4CC6-8836-0C8880D74E55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB63739-FD1C-4CC6-8836-0C8880D74E55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3DAB172-D0B9-404C-8F9E-6862171404EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3DAB172-D0B9-404C-8F9E-6862171404EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3DAB172-D0B9-404C-8F9E-6862171404EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3DAB172-D0B9-404C-8F9E-6862171404EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDB63739-FD1C-4CC6-8836-0C8880D74E55} = {0976512C-8CBA-43DD-ACA6-78F03FA50550}
+		{C3DAB172-D0B9-404C-8F9E-6862171404EF} = {0976512C-8CBA-43DD-ACA6-78F03FA50550}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2CDBFE6-FE0F-48E2-96EC-650CFC482814}

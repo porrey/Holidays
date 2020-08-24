@@ -13,9 +13,9 @@
 		<Description>Allows the creation of date intervals such as every 3rd Monday of the month.</Description>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<PackageIcon>date-interval.png</PackageIcon>
-		<Version>2.1.2</Version>
-		<FileVersion>2.1.2</FileVersion>
-		<AssemblyVersion>2.1.2</AssemblyVersion>
+		<Version>2.1.3</Version>
+		<FileVersion>2.1.3</FileVersion>
+		<AssemblyVersion>2.1.3</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>

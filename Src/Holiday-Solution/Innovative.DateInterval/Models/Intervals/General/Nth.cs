@@ -53,11 +53,7 @@ namespace Innovative.DateInterval
 
 		protected override bool OnIsValidString(string value)
 		{
-			bool returnValue = false;
-
-			returnValue = NthParser.CanParse(value);
-
-			return returnValue;
+			return NthParser.CanParse(value);
 		}
 		#endregion
 	}
