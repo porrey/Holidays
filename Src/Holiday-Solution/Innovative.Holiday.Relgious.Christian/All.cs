@@ -8,7 +8,7 @@
 			{
 				new PalmSunday(),
 				new GoodFriday(),
-				new EasterSunday(),
+				new Easter(),
 				new NationalDayOfPrayer(),
 				new ChristmasEve(),
 				new Christmas()

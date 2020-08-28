@@ -2,7 +2,7 @@
 
 namespace Innovative.Holiday
 {
-	public class EasterSunday : Holiday
+	public class Easter : Holiday
 	{
 		protected override DateTime OnGetDateTime(int index)
 		{
@@ -24,5 +24,10 @@ namespace Innovative.Holiday
 		public override string Description => "Celebration of the resurrection of Jesus.";
 		public override string Name => "Easter";
 		public override string ObservanceRule => "Sunday following the Paschal Full Moon";
+	}
+
+	[Obsolete("Use Innovative.Holiday.Easter instead.")]
+	public class EasterSunday : Easter
+	{
 	}
 }
