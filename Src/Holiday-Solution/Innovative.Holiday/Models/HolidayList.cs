@@ -29,6 +29,28 @@ namespace Innovative.Holiday
 		}
 
 		/// <summary>
+		/// Adds several ranges of holidays to the list.
+		/// </summary>
+		/// <param name="items">One or more lists of holidays to be added to the list.</param>
+		public void AddRanges(params IEnumerable<IHoliday>[] items)
+		{
+			foreach (IEnumerable<IHoliday> list in items)
+			{
+				base.AddRange(list);
+			}
+		}
+
+		/// <summary>
+		/// Adds several ranges of holidays to the list.
+		/// </summary>
+		/// <param name="items">One or more lists of holidays to be added to the list.</param>
+		public Task AddRangesAsync(params IEnumerable<IHoliday>[] items)
+		{
+			this.AddRanges(items);
+			return Task.FromResult(0);
+		}
+
+		/// <summary>
 		/// Removes a holiday from the list.
 		/// </summary>
 		/// <param name="holiday">An instance of <see cref="IHoliday"/>.</param>

@@ -11,7 +11,7 @@ namespace Innovative.Holiday.Tests
 		[SetUp]
 		public void Setup()
 		{
-			Holidays.ObservedHolidays.Clear();
+			Holidays.MyHolidays.Clear();
 		}
 
 		[Test]
@@ -23,7 +23,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
@@ -41,7 +41,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Sunday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
@@ -59,7 +59,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
@@ -77,7 +77,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.AddDays(1);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
@@ -97,7 +97,7 @@ namespace Innovative.Holiday.Tests
 			DateTime observedDate = holidayDate.AddDays(1);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
@@ -118,7 +118,7 @@ namespace Innovative.Holiday.Tests
 			DateTime observedDate = holidayDate.Subtract(TimeSpan.FromDays(1));
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
@@ -180,12 +180,12 @@ namespace Innovative.Holiday.Tests
 		public void ObservedHolidaysAddTest()
 		{
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"2/1");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(1, Holidays.ObservedHolidays.Count());
-				Assert.AreEqual(holiday, Holidays.ObservedHolidays.First());
+				Assert.AreEqual(1, Holidays.MyHolidays.Count());
+				Assert.AreEqual(holiday, Holidays.MyHolidays.First());
 			});
 		}
 
@@ -197,13 +197,13 @@ namespace Innovative.Holiday.Tests
 			MockDayOfYearHoliday holiday3 = new MockDayOfYearHoliday($"4/1");
 			MockDayOfYearHoliday holiday4 = new MockDayOfYearHoliday($"5/1");
 
-			Holidays.ObservedHolidays.AddRange(new IHoliday[] { holiday1, holiday2, holiday3, holiday4 });
+			Holidays.MyHolidays.AddRange(new IHoliday[] { holiday1, holiday2, holiday3, holiday4 });
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(4, Holidays.ObservedHolidays.Count());
-				Assert.AreEqual(holiday1, Holidays.ObservedHolidays.First());
-				Assert.AreEqual(holiday4, Holidays.ObservedHolidays.Last());
+				Assert.AreEqual(4, Holidays.MyHolidays.Count());
+				Assert.AreEqual(holiday1, Holidays.MyHolidays.First());
+				Assert.AreEqual(holiday4, Holidays.MyHolidays.Last());
 			});
 		}
 
@@ -211,12 +211,12 @@ namespace Innovative.Holiday.Tests
 		public void ObservedHolidaysRemoveTest()
 		{
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"2/1");
-			Holidays.ObservedHolidays.Add(holiday);
-			Holidays.ObservedHolidays.Remove(holiday);
+			Holidays.MyHolidays.Add(holiday);
+			Holidays.MyHolidays.Remove(holiday);
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(0, Holidays.ObservedHolidays.Count());
+				Assert.AreEqual(0, Holidays.MyHolidays.Count());
 			});
 		}
 
@@ -229,7 +229,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			// ***
 			// *** Get a DateTimeOffset with the same date as the holiday.
@@ -248,7 +248,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			// ***
 			// *** Get a DateTimeOffset with the same date as the holiday.
@@ -267,7 +267,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			// ***
 			// *** Get a DateTimeOffset with the same date as the holiday.
@@ -286,7 +286,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			// ***
 			// *** Get a DateTimeOffset with the same date as the holiday.
@@ -305,7 +305,7 @@ namespace Innovative.Holiday.Tests
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
-			Holidays.ObservedHolidays.Add(holiday);
+			Holidays.MyHolidays.Add(holiday);
 
 			// ***
 			// *** Get a DateTimeOffset with the same date as the holiday.

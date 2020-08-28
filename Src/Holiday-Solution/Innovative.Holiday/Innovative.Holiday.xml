@@ -24,6 +24,47 @@
             Gets a definition of how the day of this holiday is determined.
             </summary>
         </member>
+        <member name="T:Innovative.Holiday.IHolidayList">
+            <summary>
+            A list of holidays.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.IHolidayList.AddAsync(Innovative.Holiday.IHoliday)">
+            <summary>
+            Adds a holiday to the list.
+            </summary>
+            <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
+        </member>
+        <member name="M:Innovative.Holiday.IHolidayList.AddRange(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
+            <summary>
+            Adds a range of holidays to the list.
+            </summary>
+            <param name="items">A list of holidays to be added to the list.</param>
+        </member>
+        <member name="M:Innovative.Holiday.IHolidayList.AddRangeAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
+            <summary>
+            Adds a range of holidays to the list.
+            </summary>
+            <param name="items">A list of holidays to be added to the list.</param>
+        </member>
+        <member name="M:Innovative.Holiday.IHolidayList.AddRangesAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
+            <summary>
+            Adds several ranges of holidays to the list.
+            </summary>
+            <param name="items">One or more lists of holidays to be added to the list.</param>
+        </member>
+        <member name="M:Innovative.Holiday.IHolidayList.AddRanges(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
+            <summary>
+            Adds several ranges of holidays to the list.
+            </summary>
+            <param name="items">One or more lists of holidays to be added to the list.</param>
+        </member>
+        <member name="M:Innovative.Holiday.IHolidayList.RemoveAsync(Innovative.Holiday.IHoliday)">
+            <summary>
+            Removes a holiday from the list.
+            </summary>
+            <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
+        </member>
         <member name="T:Innovative.Holiday.IObservedHoliday">
             <summary>
             Identifies a holiday than can have a different observed
@@ -111,6 +152,18 @@
             </summary>
             <param name="items">A list of holidays to be added to the list.</param>
         </member>
+        <member name="M:Innovative.Holiday.HolidayList.AddRanges(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
+            <summary>
+            Adds several ranges of holidays to the list.
+            </summary>
+            <param name="items">One or more lists of holidays to be added to the list.</param>
+        </member>
+        <member name="M:Innovative.Holiday.HolidayList.AddRangesAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
+            <summary>
+            Adds several ranges of holidays to the list.
+            </summary>
+            <param name="items">One or more lists of holidays to be added to the list.</param>
+        </member>
         <member name="M:Innovative.Holiday.HolidayList.RemoveAsync(Innovative.Holiday.IHoliday)">
             <summary>
             Removes a holiday from the list.
@@ -122,7 +175,7 @@
             Contains global items used by the library.
             </summary>
         </member>
-        <member name="P:Innovative.Holiday.Holidays.ObservedHolidays">
+        <member name="P:Innovative.Holiday.Holidays.MyHolidays">
             <summary>
             Gets a list of holidays that are being used by the current application. This
             list is used by the extension methods within the library.

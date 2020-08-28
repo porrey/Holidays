@@ -10,7 +10,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[SetUp]
 		public void Setup()
 		{
-			Holidays.ObservedHolidays.Clear();
+			Holidays.MyHolidays.Clear();
 		}
 
 		public static IEnumerable<int> Years => Enumerable.Range(2000, 35);
@@ -26,7 +26,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("ChristmasDays")]
 		public void ChristmasTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new Christmas());
+			Holidays.MyHolidays.Add(new Christmas());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -42,7 +42,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("ChristmasObservedDays")]
 		public void ChristmasObservedTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new Christmas());
+			Holidays.MyHolidays.Add(new Christmas());
 			Assert.IsTrue(value.IsHoliday(HolidayOccurrenceType.Observed));
 		}
 
@@ -58,7 +58,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("ChristmasEveDays")]
 		public void ChristmasEveTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new ChristmasEve());
+			Holidays.MyHolidays.Add(new ChristmasEve());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -74,7 +74,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("EasterSundays")]
 		public void EasterTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new Easter());
+			Holidays.MyHolidays.Add(new Easter());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -90,7 +90,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("GoodFridays")]
 		public void GoodFridayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new GoodFriday());
+			Holidays.MyHolidays.Add(new GoodFriday());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -106,7 +106,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("PalmSundays")]
 		public void PalmSundayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new PalmSunday());
+			Holidays.MyHolidays.Add(new PalmSunday());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -122,7 +122,7 @@ namespace Innovative.Holiday.Relgious.Christian.Tests
 		[TestCaseSource("NationalDayOfPrayerDays")]
 		public void NationalDayOfPrayerTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new NationalDayOfPrayer());
+			Holidays.MyHolidays.Add(new NationalDayOfPrayer());
 			Assert.IsTrue(value.IsHoliday());
 		}
 

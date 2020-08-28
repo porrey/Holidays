@@ -10,7 +10,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[SetUp]
 		public void Setup()
 		{
-			Holidays.ObservedHolidays.Clear();
+			Holidays.MyHolidays.Clear();
 		}
 
 		public static IEnumerable<int> Years => Enumerable.Range(2000, 35);
@@ -28,7 +28,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("ColumbusDays")]
 		public void ColumbusDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new ColumbusDay());
+			Holidays.MyHolidays.Add(new ColumbusDay());
 
 			Assert.Multiple(() =>
 			{
@@ -54,7 +54,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("IndependenceDays")]
 		public void IndependenceDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new IndependenceDay());
+			Holidays.MyHolidays.Add(new IndependenceDay());
 
 			Assert.Multiple(() =>
 			{
@@ -80,7 +80,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("LaborDays")]
 		public void LaborDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new LaborDay());
+			Holidays.MyHolidays.Add(new LaborDay());
 
 			Assert.Multiple(() =>
 			{
@@ -106,7 +106,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("MartinLutherKingDays")]
 		public void MartinLutherKingDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new MartinLutherKingDay());
+			Holidays.MyHolidays.Add(new MartinLutherKingDay());
 
 			Assert.Multiple(() =>
 			{
@@ -132,7 +132,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("MemorialDays")]
 		public void MemorialDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new MemorialDay());
+			Holidays.MyHolidays.Add(new MemorialDay());
 
 			Assert.Multiple(() =>
 			{
@@ -158,7 +158,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("NewYearsDays")]
 		public void NewYearsDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new NewYearsDay());
+			Holidays.MyHolidays.Add(new NewYearsDay());
 
 			Assert.Multiple(() =>
 			{
@@ -184,7 +184,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("ThanksgivingDays")]
 		public void ThanksgivingDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new ThanksgivingDay());
+			Holidays.MyHolidays.Add(new ThanksgivingDay());
 
 			Assert.Multiple(() =>
 			{
@@ -210,7 +210,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("VeteransDays")]
 		public void VeteransDayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new VeteransDay());
+			Holidays.MyHolidays.Add(new VeteransDay());
 
 			Assert.Multiple(() =>
 			{
@@ -236,7 +236,7 @@ namespace Innovative.Holiday.Us.Federal.Tests
 		[TestCaseSource("WashingtonsBirthdays")]
 		public void WashingtonsBirthdayTest(DatePair value)
 		{
-			Holidays.ObservedHolidays.Add(new WashingtonsBirthday());
+			Holidays.MyHolidays.Add(new WashingtonsBirthday());
 
 			Assert.Multiple(() =>
 			{

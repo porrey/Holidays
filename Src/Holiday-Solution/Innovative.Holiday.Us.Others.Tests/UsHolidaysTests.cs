@@ -10,7 +10,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[SetUp]
 		public void Setup()
 		{
-			Holidays.ObservedHolidays.Clear();
+			Holidays.MyHolidays.Clear();
 		}
 
 		public static IEnumerable<int> Years => Enumerable.Range(2000, 35);
@@ -31,7 +31,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("AprilFoolsDays")]
 		public void AprilFoolsDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new AprilFoolsDay());
+			Holidays.MyHolidays.Add(new AprilFoolsDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -47,7 +47,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("ArmedForcesDays")]
 		public void ArmedForcesDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new ArmedForcesDay());
+			Holidays.MyHolidays.Add(new ArmedForcesDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -63,7 +63,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("CincoDeMayoDays")]
 		public void CincoDeMayoTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new CincoDeMayo());
+			Holidays.MyHolidays.Add(new CincoDeMayo());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -79,7 +79,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("FathersDays")]
 		public void FathersDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new FathersDay());
+			Holidays.MyHolidays.Add(new FathersDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -95,7 +95,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("FlagDays")]
 		public void FlagDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new FlagDay());
+			Holidays.MyHolidays.Add(new FlagDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -111,7 +111,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("GroundhogDays")]
 		public void GroundhogDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new GroundhogDay());
+			Holidays.MyHolidays.Add(new GroundhogDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -127,7 +127,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("HalloweenDays")]
 		public void HalloweenTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new Halloween());
+			Holidays.MyHolidays.Add(new Halloween());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -143,7 +143,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("JuneteenthDays")]
 		public void JuneteenthTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new Juneteenth());
+			Holidays.MyHolidays.Add(new Juneteenth());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -159,7 +159,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("MothersDays")]
 		public void MothersDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new MothersDay());
+			Holidays.MyHolidays.Add(new MothersDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -175,7 +175,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("NewYearsEveDays")]
 		public void NewYearsEveTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new NewYearsEve());
+			Holidays.MyHolidays.Add(new NewYearsEve());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -191,7 +191,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("SaintPatricksDays")]
 		public void SaintPatricksDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new SaintPatricksDay());
+			Holidays.MyHolidays.Add(new SaintPatricksDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -207,7 +207,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		[TestCaseSource("ValentinesDays")]
 		public void ValentinesDayTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new ValentinesDay());
+			Holidays.MyHolidays.Add(new ValentinesDay());
 			Assert.IsTrue(value.IsHoliday());
 		}
 

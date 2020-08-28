@@ -11,9 +11,9 @@
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Defines date intervals for daylight savings start and end dates.</Description>
-		<Version>2.1.3</Version>
-		<FileVersion>2.1.3</FileVersion>
-		<AssemblyVersion>2.1.3</AssemblyVersion>
+		<Version>2.1.4</Version>
+		<FileVersion>2.1.4</FileVersion>
+		<AssemblyVersion>2.1.4</AssemblyVersion>
 		<PackageIcon>holiday-dst.png</PackageIcon>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -24,8 +24,16 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
 	  <DocumentationFile>Innovative.Holiday.Dst.xml</DocumentationFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Innovative.Holiday.Dst.xml" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />

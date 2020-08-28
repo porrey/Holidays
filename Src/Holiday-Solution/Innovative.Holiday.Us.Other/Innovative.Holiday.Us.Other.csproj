@@ -12,9 +12,9 @@
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Provides a set of holiday definitions for US holidays.</Description>
 		<PackageIcon>holiday-us-other.png</PackageIcon>
-		<Version>2.1.3</Version>
-		<FileVersion>2.1.3</FileVersion>
-		<AssemblyVersion>2.1.3</AssemblyVersion>
+		<Version>2.1.4</Version>
+		<FileVersion>2.1.4</FileVersion>
+		<AssemblyVersion>2.1.4</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -28,10 +28,18 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Innovative.Holiday.Us.Other.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
 		<ProjectReference Include="..\Innovative.Holiday.Us.FederalRule\Innovative.Holiday.Us.FederalRule.csproj" />
 		<ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
 	</ItemGroup>
+
+	<PropertyGroup>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
 
 	<ItemGroup>
 	  <None Include="..\..\..\Images\holiday-us-other.png">

@@ -10,7 +10,7 @@ namespace Innovative.Holiday.Dst.Tests
 		[SetUp]
 		public void Setup()
 		{
-			Holidays.ObservedHolidays.Clear();
+			Holidays.MyHolidays.Clear();
 		}
 
 		public static IEnumerable<int> Years => Enumerable.Range(2000, 35);
@@ -21,7 +21,7 @@ namespace Innovative.Holiday.Dst.Tests
 		[TestCaseSource("StartDstDays")]
 		public void StartDstTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new StartDst());
+			Holidays.MyHolidays.Add(new StartDst());
 			Assert.IsTrue(value.IsHoliday());
 		}
 
@@ -37,7 +37,7 @@ namespace Innovative.Holiday.Dst.Tests
 		[TestCaseSource("EndDstDays")]
 		public void EndDstTest(DateTime value)
 		{
-			Holidays.ObservedHolidays.Add(new EndDst());
+			Holidays.MyHolidays.Add(new EndDst());
 			Assert.IsTrue(value.IsHoliday());
 		}
 

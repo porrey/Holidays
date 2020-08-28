@@ -13,20 +13,20 @@ namespace Innovative.Holiday
 
 			if (holidayOccurrenceType == HolidayOccurrenceType.Actual)
 			{
-				returnValue = (from tbl in Holidays.ObservedHolidays
+				returnValue = (from tbl in Holidays.MyHolidays
 							   where tbl.GetByYear(value.Year) == value.Date
 							   select tbl).ToArray();
 			}
 			if (holidayOccurrenceType == HolidayOccurrenceType.Observed)
 			{
-				returnValue = (from tbl in Holidays.ObservedHolidays
+				returnValue = (from tbl in Holidays.MyHolidays
 							   where tbl is IObservedHoliday &&
 							   ((IObservedHoliday)tbl).GetObservedByYear(value.Year) == value.Date
 							   select tbl).ToArray();
 			}
 			else
 			{
-				returnValue = (from tbl in Holidays.ObservedHolidays
+				returnValue = (from tbl in Holidays.MyHolidays
 							   where tbl.GetByYear(value.Year) == value.Date ||
 							  (tbl is IObservedHoliday && ((IObservedHoliday)tbl).GetObservedByYear(value.Year) == value.Date)
 							   select tbl).ToArray();

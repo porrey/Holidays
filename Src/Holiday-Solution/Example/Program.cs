@@ -8,11 +8,10 @@ namespace Example
 	{
 		static void Main(string[] args)
 		{
-			Holidays.ObservedHolidays.AddRange(Innovative.Holiday.Us.Federal.All.Items);
-			Holidays.ObservedHolidays.Add(new Christmas());
+			Holidays.MyHolidays.AddRangesAsync(Innovative.Holiday.Us.Federal.All.Items, Innovative.Holiday.Us.Other.All.Items);
+			Holidays.MyHolidays.Add(new Christmas());
 
-			// 9/8/2020 12:00:00 AM -05:00
-			DateTimeOffset? dt = new DateTimeOffset(new DateTime(2020, 9, 8), TimeSpan.FromHours(-5));
+			DateTimeOffset? dt = new DateTimeOffset(new DateTime(2020, 9, 7), TimeSpan.FromHours(-5));
 
 			bool isHoliday = dt.IsHoliday(HolidayOccurrenceType.Observed);
 			IEnumerable<IHoliday> holidays = dt.GetHoliday(HolidayOccurrenceType.Observed);

@@ -12,9 +12,9 @@
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Provides a definition and rule for US federal holidays.</Description>
 		<PackageIcon>holiday-us-federal.png</PackageIcon>
-		<Version>2.1.3</Version>
-		<FileVersion>2.1.3</FileVersion>
-		<AssemblyVersion>2.1.3</AssemblyVersion>
+		<Version>2.1.4</Version>
+		<FileVersion>2.1.4</FileVersion>
+		<AssemblyVersion>2.1.4</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -24,8 +24,16 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
 	  <DocumentationFile>Innovative.Holiday.Us.FederalRule.xml</DocumentationFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Innovative.Holiday.Us.FederalRule.xml" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
