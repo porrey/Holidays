@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Innovative.Holiday.Us.FederalRule</name>
+    </assembly>
+    <members>
+        <member name="T:Innovative.Holiday.FederalHolidayRule">
+            <summary>
+            Adjusts a holiday date per the US federal holiday rule. If the holiday falls
+            on a Saturday, it is observed on the previous Friday. If the holiday falls on
+            a Sunday, it is observed on the next Monday. 
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.FederalHolidayRule.AdjustedDate(System.DateTime)">
+            <summary>
+            Returns an adjusted date.
+            </summary>
+            <param name="value">The date to be adjusted.</param>
+            <returns>Returns the adjusted date of this holiday.</returns>
+        </member>
+    </members>
+</doc>

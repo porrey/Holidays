@@ -40,12 +40,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void AprilFoolsDayYearTest(int year)
 		{
 			AprilFoolsDay holiday = new AprilFoolsDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -61,12 +56,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void ArmedForcesDayYearTest(int year)
 		{
 			ArmedForcesDay holiday = new ArmedForcesDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -82,12 +72,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void CincoDeMayoYearTest(int year)
 		{
 			CincoDeMayo holiday = new CincoDeMayo();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -103,12 +88,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void FathersDayYearTest(int year)
 		{
 			FathersDay holiday = new FathersDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -124,12 +104,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void FlagDayYearTest(int year)
 		{
 			FlagDay holiday = new FlagDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -145,12 +120,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void GroundhogDayYearTest(int year)
 		{
 			GroundhogDay holiday = new GroundhogDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -166,12 +136,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void HalloweenYearTest(int year)
 		{
 			Halloween holiday = new Halloween();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -187,12 +152,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void JuneteenthYearTest(int year)
 		{
 			Juneteenth holiday = new Juneteenth();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -208,12 +168,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void MothersDayYearTest(int year)
 		{
 			MothersDay holiday = new MothersDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -229,12 +184,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void NewYearsEveYearTest(int year)
 		{
 			NewYearsEve holiday = new NewYearsEve();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -250,12 +200,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void SaintPatricksDayYearTest(int year)
 		{
 			SaintPatricksDay holiday = new SaintPatricksDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -271,12 +216,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void ValentinesDayYearTest(int year)
 		{
 			ValentinesDay holiday = new ValentinesDay();
-
-			Assert.Multiple(() =>
-			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
-			});
+			Assert.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 	}
 }

@@ -27,11 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0976512C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Federal.Tests", "Innovative.Holiday.Us.Federal.Tests\Innovative.Holiday.Us.Federal.Tests.csproj", "{C3DAB172-D0B9-404C-8F9E-6862171404EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Us.Others.Tests", "Innovative.Holiday.Us.Others.Tests\Innovative.Holiday.Us.Others.Tests.csproj", "{B8A58D6B-C4AE-4BC9-88E5-FB513A586572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Others.Tests", "Innovative.Holiday.Us.Others.Tests\Innovative.Holiday.Us.Others.Tests.csproj", "{B8A58D6B-C4AE-4BC9-88E5-FB513A586572}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Dst.Tests", "Innovative.Holiday.Dst.Tests\Innovative.Holiday.Dst.Tests.csproj", "{F83E489B-E0D7-4940-99B0-30F91667AB77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Dst.Tests", "Innovative.Holiday.Dst.Tests\Innovative.Holiday.Dst.Tests.csproj", "{F83E489B-E0D7-4940-99B0-30F91667AB77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Relgious.Christian.Tests", "Innovative.Holiday.Relgious.Christian.Tests\Innovative.Holiday.Relgious.Christian.Tests.csproj", "{6F8F7477-3568-4F33-A373-D6A7FECBFA39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Relgious.Christian.Tests", "Innovative.Holiday.Relgious.Christian.Tests\Innovative.Holiday.Relgious.Christian.Tests.csproj", "{6F8F7477-3568-4F33-A373-D6A7FECBFA39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.FederalRule", "Innovative.Holiday.Us.FederalRule\Innovative.Holiday.Us.FederalRule.csproj", "{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -95,6 +97,10 @@ Global
 		{6F8F7477-3568-4F33-A373-D6A7FECBFA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F8F7477-3568-4F33-A373-D6A7FECBFA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F8F7477-3568-4F33-A373-D6A7FECBFA39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -23,6 +23,10 @@
 		<Deterministic>true</Deterministic>
 	</PropertyGroup>
 
+	<PropertyGroup>
+	  <DocumentationFile>Innovative.Holiday.xml</DocumentationFile>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
 	</ItemGroup>

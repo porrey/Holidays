@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Innovative.Holiday</name>
+    </assembly>
+    <members>
+        <member name="T:Innovative.Holiday.IHoliday">
+            <summary>
+            Interface to define the base for a holiday.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.IHoliday.Name">
+            <summary>
+            Gets the name of the holiday.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.IHoliday.Description">
+            <summary>
+            Gets a description or history of the holiday.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.IHoliday.ObservanceRule">
+            <summary>
+            Gets a definition of how the day of this holiday is determined.
+            </summary>
+        </member>
+        <member name="T:Innovative.Holiday.IObservedHoliday">
+            <summary>
+            Identifies a holiday than can have a different observed
+            day that the actual day the holiday officially falls on.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.IObservedHoliday.NextObserved">
+            <summary>
+            Gets the next observed date for this holiday.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.IObservedHoliday.GetObservedByIndex(System.Int32)">
+            <summary>
+            Gets the next observed date for this holiday by index.
+            </summary>
+            <param name="index">A value the indicates the nth occurrence where 
+            0 is the next occurrence.</param>
+            <returns>The date of the nth occurrence of this holiday.</returns>
+        </member>
+        <member name="M:Innovative.Holiday.IObservedHoliday.GetObservedByYear(System.Int32)">
+            <summary>
+            Gets the observed date of this holiday in any specified year.
+            </summary>
+            <param name="year">The year within the date of this holiday is retrieved.</param>
+            <returns>The date of the occurrence of this holiday in the specified year.</returns>
+        </member>
+        <member name="P:Innovative.Holiday.IObservedHoliday.ObservedHolidayRule">
+            <summary>
+            Gets the rule used to adjust the date.
+            </summary>
+        </member>
+        <member name="T:Innovative.Holiday.IObservedHolidayRule">
+            <summary>
+            An interface for a rule that can adjust the 
+            holiday date for an holiday that implements <see cref="T:Innovative.Holiday.IObservedHoliday"/>.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.IObservedHolidayRule.AdjustedDate(System.DateTime)">
+            <summary>
+            Returns an adjusted date.
+            </summary>
+            <param name="value">The date to be adjusted.</param>
+            <returns>Returns the adjusted date of this holiday.</returns>
+        </member>
+        <member name="T:Innovative.Holiday.Holiday">
+            <summary>
+            Abstract class to define the base for a holiday.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.Holiday.Name">
+            <summary>
+            Gets the name of the holiday.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.Holiday.Description">
+            <summary>
+            Gets a description or history of the holiday.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.Holiday.ObservanceRule">
+            <summary>
+            Gets a definition of how the day of this holiday is determined.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.Holiday.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="T:Innovative.Holiday.HolidayList">
+            <summary>
+            A list of holidays.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.HolidayList.AddAsync(Innovative.Holiday.IHoliday)">
+            <summary>
+            Adds a holiday to the list.
+            </summary>
+            <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
+        </member>
+        <member name="M:Innovative.Holiday.HolidayList.AddRangeAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
+            <summary>
+            Adds a range of holidays to the list.
+            </summary>
+            <param name="items">A list of holidays to be added to the list.</param>
+        </member>
+        <member name="M:Innovative.Holiday.HolidayList.RemoveAsync(Innovative.Holiday.IHoliday)">
+            <summary>
+            Removes a holiday from the list.
+            </summary>
+            <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
+        </member>
+        <member name="T:Innovative.Holiday.Holidays">
+            <summary>
+            Contains global items used by the library.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.Holidays.ObservedHolidays">
+            <summary>
+            Gets a list of holidays that are being used by the current application. This
+            list is used by the extension methods within the library.
+            </summary>
+        </member>
+        <member name="T:Innovative.Holiday.ObservedHoliday">
+            <summary>
+            Identifies a holiday than can have a different observed
+            day that the actual day the holiday officially falls on.
+            </summary>
+        </member>
+        <member name="P:Innovative.Holiday.ObservedHoliday.NextObserved">
+            <summary>
+            Gets the next observed date for this holiday.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.ObservedHoliday.GetObservedByIndex(System.Int32)">
+            <summary>
+            Gets the next observed date for this holiday by index.
+            </summary>
+            <param name="index">A value the indicates the nth occurrence where 
+            0 is the next occurrence.</param>
+            <returns>The date of the nth occurrence of this holiday.</returns>
+        </member>
+        <member name="M:Innovative.Holiday.ObservedHoliday.GetObservedByYear(System.Int32)">
+            <summary>
+            Gets the observed date of this holiday in any specified year.
+            </summary>
+            <param name="year">The year within the date of this holiday is retrieved.</param>
+            <returns>The date of the occurrence of this holiday in the specified year.</returns>
+        </member>
+        <member name="P:Innovative.Holiday.ObservedHoliday.ObservedHolidayRule">
+            <summary>
+            Gets the rule used to adjust the date.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.ObservedHoliday.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+    </members>
+</doc>

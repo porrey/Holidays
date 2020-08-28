@@ -23,6 +23,10 @@
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 
+	<PropertyGroup>
+	  <DocumentationFile>Innovative.SystemTime.xml</DocumentationFile>
+	</PropertyGroup>
+
 	<ItemGroup>
 	  <None Include="..\..\..\Images\time.png">
 	    <Pack>True</Pack>

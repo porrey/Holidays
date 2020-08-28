@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
+    <ProjectReference Include="..\Innovative.Holiday.Us.FederalRule\Innovative.Holiday.Us.FederalRule.csproj" />
     <ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
   </ItemGroup>
 
