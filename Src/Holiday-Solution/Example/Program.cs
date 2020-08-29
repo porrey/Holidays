@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using Innovative.Holiday;
 
-namespace Example
+namespace Innovative.Holiday.Example
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			Holidays.MyHolidays.AddRangesAsync(Innovative.Holiday.Us.Federal.All.Items, Innovative.Holiday.Us.Other.All.Items);
-			Holidays.MyHolidays.Add(new Christmas());
+			Holidays.Register(Us.Federal.All.Items, Us.Other.All.Items);
+			Holidays.Register(new Christmas());
 
 			DateTimeOffset? dt = new DateTimeOffset(new DateTime(2020, 9, 7), TimeSpan.FromHours(-5));
 
