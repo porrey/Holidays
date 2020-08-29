@@ -142,31 +142,31 @@
         </member>
         <member name="M:Innovative.Holiday.HolidayList.AddAsync(Innovative.Holiday.IHoliday)">
             <summary>
-            Adds a holiday to the list.
+            Adds a <see cref="T:Innovative.Holiday.IHoliday"/> to the list.
             </summary>
             <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
         </member>
         <member name="M:Innovative.Holiday.HolidayList.AddRangeAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
             <summary>
-            Adds a range of holidays to the list.
+            Adds a range of <see cref="T:Innovative.Holiday.IHoliday"/> to the list.
             </summary>
-            <param name="items">A list of holidays to be added to the list.</param>
+            <param name="holidays">A list of <see cref="T:Innovative.Holiday.IHoliday"/> items.</param>
         </member>
         <member name="M:Innovative.Holiday.HolidayList.AddRanges(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
             <summary>
-            Adds several ranges of holidays to the list.
+            Adds several ranges of <see cref="T:Innovative.Holiday.IHoliday"/> to the list.
             </summary>
-            <param name="items">One or more lists of holidays to be added to the list.</param>
+            <param name="holidays">One or more lists of <see cref="T:Innovative.Holiday.IHoliday"/> to be added to the list.</param>
         </member>
         <member name="M:Innovative.Holiday.HolidayList.AddRangesAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
             <summary>
-            Adds several ranges of holidays to the list.
+            Adds several ranges of <see cref="T:Innovative.Holiday.IHoliday"/> to the list.
             </summary>
-            <param name="items">One or more lists of holidays to be added to the list.</param>
+            <param name="holidays">One or more lists of <see cref="T:Innovative.Holiday.IHoliday"/> to be added to the list.</param>
         </member>
         <member name="M:Innovative.Holiday.HolidayList.RemoveAsync(Innovative.Holiday.IHoliday)">
             <summary>
-            Removes a holiday from the list.
+            Removes a <see cref="T:Innovative.Holiday.IHoliday"/> from the list.
             </summary>
             <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
         </member>
@@ -180,6 +180,42 @@
             Gets a list of holidays that are being used by the current application. This
             list is used by the extension methods within the library.
             </summary>
+        </member>
+        <member name="M:Innovative.Holiday.Holidays.Register(Innovative.Holiday.IHoliday)">
+            <summary>
+            Register a holiday to be considered by extensions methods within this library.
+            </summary>
+            <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
+        </member>
+        <member name="M:Innovative.Holiday.Holidays.RegisterAsync(Innovative.Holiday.IHoliday)">
+            <summary>
+            Register a holiday to be considered by extensions methods within this library.
+            </summary>
+            <param name="holiday">An instance of <see cref="T:Innovative.Holiday.IHoliday"/>.</param>
+        </member>
+        <member name="M:Innovative.Holiday.Holidays.Register(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
+            <summary>
+            Registers a list of <see cref="T:Innovative.Holiday.IHoliday"/> items.
+            </summary>
+            <param name="holidays">A list of <see cref="T:Innovative.Holiday.IHoliday"/> items.</param>
+        </member>
+        <member name="M:Innovative.Holiday.Holidays.RegisterAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
+            <summary>
+            Registers a list of <see cref="T:Innovative.Holiday.IHoliday"/> items.
+            </summary>
+            <param name="holidays">A list of <see cref="T:Innovative.Holiday.IHoliday"/> items.</param>
+        </member>
+        <member name="M:Innovative.Holiday.Holidays.Register(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
+            <summary>
+            Registers several lists of <see cref="T:Innovative.Holiday.IHoliday"/> items.
+            </summary>
+            <param name="holidays">One or more lists of <see cref="T:Innovative.Holiday.IHoliday"/> items.</param>
+        </member>
+        <member name="M:Innovative.Holiday.Holidays.RegisterAsync(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday}[])">
+            <summary>
+            Registers several lists of <see cref="T:Innovative.Holiday.IHoliday"/> items.
+            </summary>
+            <param name="holidays">One or more lists of <see cref="T:Innovative.Holiday.IHoliday"/> items.</param>
         </member>
         <member name="T:Innovative.Holiday.ObservedHoliday">
             <summary>

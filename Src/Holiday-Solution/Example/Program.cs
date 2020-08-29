@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Innovative.SystemTime;
 
 namespace Innovative.Holiday.Example
 {
@@ -7,8 +8,7 @@ namespace Innovative.Holiday.Example
 	{
 		static void Main(string[] args)
 		{
-			Holidays.Register(Us.Federal.All.Items, Us.Other.All.Items);
-			Holidays.Register(new Christmas());
+			Holidays.Register(Us.Federal.All.Items, Us.Other.All.Items, Religious.Christian.All.Items);
 
 			DateTimeOffset? dt = new DateTimeOffset(new DateTime(2020, 9, 7), TimeSpan.FromHours(-5));
 

@@ -1,4 +1,4 @@
-﻿namespace Innovative.Holiday.Relgious.Christian
+﻿namespace Innovative.Holiday.Religious.Christian
 {
 	public static class All
 	{

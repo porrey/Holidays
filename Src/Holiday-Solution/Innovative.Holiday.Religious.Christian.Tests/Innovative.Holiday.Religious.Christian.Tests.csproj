@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Innovative.Holiday.Relgious.Christian\Innovative.Holiday.Relgious.Christian.csproj" />
+    <ProjectReference Include="..\Innovative.Holiday.Religious.Christian\Innovative.Holiday.Religious.Christian.csproj" />
   </ItemGroup>
 
 </Project>

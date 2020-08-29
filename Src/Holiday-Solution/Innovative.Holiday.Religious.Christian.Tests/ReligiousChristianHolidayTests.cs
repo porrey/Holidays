@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 
-namespace Innovative.Holiday.Relgious.Christian.Tests
+namespace Innovative.Holiday.Religious.Christian.Tests
 {
 	public class ReligiousChristianHolidayTests
 	{

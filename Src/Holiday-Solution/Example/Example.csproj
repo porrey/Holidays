@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Innovative.Holiday.Dst\Innovative.Holiday.Dst.csproj" />
-    <ProjectReference Include="..\Innovative.Holiday.Relgious.Christian\Innovative.Holiday.Relgious.Christian.csproj" />
+    <ProjectReference Include="..\Innovative.Holiday.Religious.Christian\Innovative.Holiday.Religious.Christian.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Seasons\Innovative.Holiday.Seasons.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Us.Federal\Innovative.Holiday.Us.Federal.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Us.Other\Innovative.Holiday.Us.Other.csproj" />

@@ -1,38 +1,41 @@
 ﻿using System;
+using System.Runtime.Serialization;
+using System.Security.Permissions;
 
 namespace Innovative.SystemTime
 {
-	public struct Time : IComparable, IFormattable, IComparable<Time>, IEquatable<Time>
+	[Serializable]
+	public struct Time : IComparable, IComparable<Time>, IFormattable, IEquatable<Time>, ICloneable, ISerializable
 	{
-		private TimeSpan _innerValue;
-
 		public Time(TimeSpan value)
 		{
-			_innerValue = value;
+			this.TimeSpan = value;
 		}
 
 		public Time(DateTime value)
 		{
-			_innerValue = value.TimeOfDay;
+			this.TimeSpan = value.TimeOfDay;
 		}
 
 		public Time(string value)
 		{
 			Time t = Time.Parse(value);
-			_innerValue = t.TimeSpan;
+			this.TimeSpan = t.TimeSpan;
 		}
 
-		public TimeSpan TimeSpan
+		public Time(SerializationInfo info, StreamingContext context)
 		{
-			get
+			if (info != null)
 			{
-				return _innerValue;
+				this.TimeSpan = (TimeSpan)info.GetValue("InnerValue", typeof(TimeSpan));
 			}
-			set
+			else
 			{
-				_innerValue = value;
+				throw new ArgumentNullException("info");
 			}
 		}
+
+		public TimeSpan TimeSpan { get; set; }
 
 		public DateTime Date
 		{
@@ -82,9 +85,7 @@ namespace Innovative.SystemTime
 			bool returnValue = false;
 			result = Time.Empty;
 
-			DateTime parsedValue = DateTime.MinValue;
-
-			if (DateTime.TryParse(s, out parsedValue))
+			if (DateTime.TryParse(s, out DateTime parsedValue))
 			{
 				result = new Time(parsedValue.TimeOfDay);
 				returnValue = true;
@@ -95,12 +96,7 @@ namespace Innovative.SystemTime
 
 		public static bool CanParse(string s)
 		{
-			bool returnValue = false;
-
-			Time parsedResult = Time.Empty;
-			returnValue = Time.TryParse(s, out parsedResult);
-
-			return returnValue;
+			return Time.TryParse(s, out Time _);
 		}
 
 		public static Time Empty
@@ -409,9 +405,9 @@ namespace Innovative.SystemTime
 		{
 			int returnValue = -1;
 
-			if (obj is Time)
+			if (obj is Time time)
 			{
-				returnValue = this.TimeSpan.CompareTo(((Time)obj).TimeSpan);
+				returnValue = this.TimeSpan.CompareTo(time.TimeSpan);
 			}
 
 			return returnValue;
@@ -436,6 +432,28 @@ namespace Innovative.SystemTime
 		public bool Equals(Time other)
 		{
 			return this.Equals(other);
+		}
+		#endregion
+
+		#region ICloneable
+		public object Clone()
+		{
+			return new Time(this.TimeSpan);
+		}
+		#endregion region
+
+		#region
+		[SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
+		public void GetObjectData(SerializationInfo info, StreamingContext context)
+		{
+			if (info != null)
+			{
+				info.AddValue("InnerValue", this.TimeSpan);
+			}
+			else
+			{
+				throw new ArgumentNullException("info");
+			}
 		}
 		#endregion
 	}

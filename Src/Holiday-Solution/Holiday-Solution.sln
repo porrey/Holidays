@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Other
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.SystemTime", "Innovative.SystemTime\Innovative.SystemTime.csproj", "{5E9AC9F9-8476-47FA-B2D9-8A2500E485DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Relgious.Christian", "Innovative.Holiday.Relgious.Christian\Innovative.Holiday.Relgious.Christian.csproj", "{CF145431-A735-4DA5-A6B5-28A8E30AAEC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Religious.Christian", "Innovative.Holiday.Religious.Christian\Innovative.Holiday.Religious.Christian.csproj", "{CF145431-A735-4DA5-A6B5-28A8E30AAEC9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Dst", "Innovative.Holiday.Dst\Innovative.Holiday.Dst.csproj", "{573C9D9D-2472-4FE9-AD43-A46BE1603D1F}"
 EndProject
@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Other
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Dst.Tests", "Innovative.Holiday.Dst.Tests\Innovative.Holiday.Dst.Tests.csproj", "{F83E489B-E0D7-4940-99B0-30F91667AB77}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Relgious.Christian.Tests", "Innovative.Holiday.Relgious.Christian.Tests\Innovative.Holiday.Relgious.Christian.Tests.csproj", "{6F8F7477-3568-4F33-A373-D6A7FECBFA39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Religious.Christian.Tests", "Innovative.Holiday.Religious.Christian.Tests\Innovative.Holiday.Religious.Christian.Tests.csproj", "{6F8F7477-3568-4F33-A373-D6A7FECBFA39}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.FederalRule", "Innovative.Holiday.Us.FederalRule\Innovative.Holiday.Us.FederalRule.csproj", "{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}"
 EndProject
