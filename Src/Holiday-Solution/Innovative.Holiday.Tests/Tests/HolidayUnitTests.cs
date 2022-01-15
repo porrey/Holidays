@@ -1,3 +1,19 @@
+//
+// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see http://www.gnu.org/licenses/.
+//
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +33,9 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void HolidayTest()
 		{
-			// ***
-			// *** Create a holiday tomorrow.
-			// ***
+			//
+			// Create a holiday tomorrow.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
@@ -35,9 +51,9 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void HolidayObservedNoRollForwardTest()
 		{
-			// ***
-			// *** Create a holiday next Sunday.
-			// ***
+			//
+			// Create a holiday next Sunday.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Sunday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
@@ -53,9 +69,9 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void HolidayObservedNoRollBackTest()
 		{
-			// ***
-			// *** Create a holiday next Saturday.
-			// ***
+			//
+			// Create a holiday next Saturday.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
@@ -71,9 +87,9 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void FederalHolidayTest()
 		{
-			// ***
-			// *** Create a holiday next Monday.
-			// ***
+			//
+			// Create a holiday next Monday.
+			//
 			DateTime holidayDate = DateTime.Now.AddDays(1);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
@@ -90,9 +106,9 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void FederalHolidayObservedRoolForwardTest()
 		{
-			// ***
-			// *** Create a holiday next Sunday.
-			// ***
+			//
+			// Create a holiday next Sunday.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Sunday);
 			DateTime observedDate = holidayDate.AddDays(1);
 
@@ -111,9 +127,9 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void FederalHolidayObservedRollBackTest()
 		{
-			// ***
-			// *** Create a holiday next Saturday.
-			// ***
+			//
+			// Create a holiday next Saturday.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 			DateTime observedDate = holidayDate.Subtract(TimeSpan.FromDays(1));
 
@@ -223,17 +239,17 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void DateTimeOffsetIsHoliday()
 		{
-			// ***
-			// *** Create a holiday tomorrow.
-			// ***
+			//
+			// Create a holiday tomorrow.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
 			Holidays.MyHolidays.Add(holiday);
 
-			// ***
-			// *** Get a DateTimeOffset with the same date as the holiday.
-			// ***
+			//
+			// Get a DateTimeOffset with the same date as the holiday.
+			//
 			DateTimeOffset checkdate = DateTimeOffset.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			Assert.IsTrue(checkdate.IsHoliday());
@@ -242,17 +258,17 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void DateTimeOffsetGetHoliday()
 		{
-			// ***
-			// *** Create a holiday tomorrow.
-			// ***
+			//
+			// Create a holiday tomorrow.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday($"{holidayDate.Month}/{holidayDate.Day}");
 			Holidays.MyHolidays.Add(holiday);
 
-			// ***
-			// *** Get a DateTimeOffset with the same date as the holiday.
-			// ***
+			//
+			// Get a DateTimeOffset with the same date as the holiday.
+			//
 			DateTimeOffset checkdate = DateTimeOffset.Now.NextDayOfWeek(DayOfWeek.Monday);
 
 			Assert.AreSame(checkdate.GetHoliday().Single(), holiday);
@@ -261,17 +277,17 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void IsHolidayActual()
 		{
-			// ***
-			// *** Create a holiday tomorrow.
-			// ***
+			//
+			// Create a holiday tomorrow.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
 			Holidays.MyHolidays.Add(holiday);
 
-			// ***
-			// *** Get a DateTimeOffset with the same date as the holiday.
-			// ***
+			//
+			// Get a DateTimeOffset with the same date as the holiday.
+			//
 			DateTime checkdate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			Assert.IsTrue(checkdate.IsHoliday(HolidayOccurrenceType.Actual));
@@ -280,17 +296,17 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void IsHolidayObserved()
 		{
-			// ***
-			// *** Create a holiday tomorrow.
-			// ***
+			//
+			// Create a holiday tomorrow.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
 			Holidays.MyHolidays.Add(holiday);
 
-			// ***
-			// *** Get a DateTimeOffset with the same date as the holiday.
-			// ***
+			//
+			// Get a DateTimeOffset with the same date as the holiday.
+			//
 			DateTime checkdate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday).Subtract(TimeSpan.FromDays(1));
 
 			Assert.IsTrue(checkdate.IsHoliday(HolidayOccurrenceType.Observed));
@@ -299,17 +315,17 @@ namespace Innovative.Holiday.Tests
 		[Test]
 		public void IsHolidayAny()
 		{
-			// ***
-			// *** Create a holiday tomorrow.
-			// ***
+			//
+			// Create a holiday tomorrow.
+			//
 			DateTime holidayDate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
 			MockDayOfYearFederalHoliday holiday = new MockDayOfYearFederalHoliday($"{holidayDate.Month}/{holidayDate.Day}");
 			Holidays.MyHolidays.Add(holiday);
 
-			// ***
-			// *** Get a DateTimeOffset with the same date as the holiday.
-			// ***
+			//
+			// Get a DateTimeOffset with the same date as the holiday.
+			//
 			DateTime checkdate1 = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday).Subtract(TimeSpan.FromDays(1));
 			DateTime checkdate2 = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 

@@ -1,4 +1,20 @@
-﻿using System;
+﻿//
+// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see http://www.gnu.org/licenses/.
+//
+using System;
 using System.Linq;
 using Innovative.SystemTime;
 
@@ -10,7 +26,7 @@ namespace Innovative.DateInterval
 		{
 			this.ValidCombinations = new Combination[]
 			{
-				// *** The Month, Specific Day, 1 - 5 (example: 4th Monday of the Month)
+				// The Month, Specific Day, 1 - 5 (example: 4th Monday of the Month)
 				new Combination() { Period = Period.The_Month, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				new Combination() { Period = Period.The_Month, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				new Combination() { Period = Period.The_Month, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
@@ -25,22 +41,22 @@ namespace Innovative.DateInterval
 		{
 			DateTime returnValue = DateTime.MinValue;
 
-			// ***
-			// *** Need to calculate these three values
-			// *** to compute a date
-			// ***
+			//
+			// Need to calculate these three values
+			// to compute a date
+			//
 			int year = DateTime.Now.Year;
 			int month = DateTime.Now.Month;
 			int day = (int)division;
 
-			// ***
-			// *** Calculate the date
-			// ***
+			//
+			// Calculate the date
+			//
 			returnValue = this._GetDate(year, month, division, n).SetTime(time);
 
-			// ***
-			// *** Adjust if in the past
-			// ***
+			//
+			// Adjust if in the past
+			//
 			if (returnValue < DateTime.Now)
 			{
 				returnValue.AddMonths(1);
@@ -57,9 +73,9 @@ namespace Innovative.DateInterval
 			int month = next.Month + index;			
 			Division division = (Division)((int)next.DayOfWeek);
 
-			// ***
-			// *** The next date needs to be recalculated
-			// ***
+			//
+			// The next date needs to be recalculated
+			//
 			returnValue = this._GetDate(year, month, division, n).SetTime(next.TimeOfDay);
 
 			return returnValue;
@@ -69,9 +85,9 @@ namespace Innovative.DateInterval
 		{
 			DateTime returnValue = DateTime.MinValue;
 
-			// ***
-			// *** Get the first day of the month and then adjust the date
-			// ***
+			//
+			// Get the first day of the month and then adjust the date
+			//
 			DateTime firstDayOfMonth = new DateTime(year, month, 1);
 			int dayOfWeek = (int)division;
 
@@ -87,9 +103,9 @@ namespace Innovative.DateInterval
 				returnValue = firstDayOfMonth.Add(TimeSpan.FromDays(dayDifference));
 			}
 
-			// ***
-			// *** Get the maximum number of DayOfWeek's in the month
-			// ***
+			//
+			// Get the maximum number of DayOfWeek's in the month
+			//
 			int maxDayOfWeek = NthParser.DayOfWeekCount((DayOfWeek)dayOfWeek, month, year);
 			int daysToAdd = 0;
 
@@ -102,9 +118,9 @@ namespace Innovative.DateInterval
 				daysToAdd = (n - 1) * 7;
 			}
 
-			// ***
-			// *** Add the days to get the Nth occurrence
-			// ***
+			//
+			// Add the days to get the Nth occurrence
+			//
 			returnValue = returnValue.AddDays(daysToAdd);
 
 			return returnValue;

@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>Daniel M. Porrey</Authors>
@@ -12,9 +11,9 @@
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Provides a set of holiday definitions for US federal holidays.</Description>
 		<PackageIcon>holiday-us-federal.png</PackageIcon>
-		<Version>2.1.4</Version>
-		<FileVersion>2.1.4</FileVersion>
-		<AssemblyVersion>2.1.4</AssemblyVersion>
+		<Version>2.1.5</Version>
+		<FileVersion>2.1.5</FileVersion>
+		<AssemblyVersion>2.1.5</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -28,11 +27,12 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-	  <DocumentationFile>Innovative.Holiday.Us.Federal.xml</DocumentationFile>
+		<DocumentationFile>Innovative.Holiday.Us.Federal.xml</DocumentationFile>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Innovative.Holiday.Us.Federal.xml" />
+		<None Remove="Innovative.Holiday.Us.Federal.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -42,12 +42,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\Images\holiday-us-federal.png">
-	    <Pack>True</Pack>
-	    <PackagePath></PackagePath>
-	  </None>
+		<None Include="..\..\..\Images\holiday-us-federal.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
 	</ItemGroup>
-
-
-
 </Project>

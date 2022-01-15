@@ -1,7 +1,6 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>Daniel M. Porrey</Authors>
@@ -11,9 +10,9 @@
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description></Description>
-		<Version>2.1.4</Version>
-		<FileVersion>2.1.4</FileVersion>
-		<AssemblyVersion>2.1.4</AssemblyVersion>
+		<Version>2.1.5</Version>
+		<FileVersion>2.1.5</FileVersion>
+		<AssemblyVersion>2.1.5</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -27,16 +26,16 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-	  <DocumentationFile>Innovative.Holiday.Seasons.xml</DocumentationFile>
+		<DocumentationFile>Innovative.Holiday.Seasons.xml</DocumentationFile>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Innovative.Holiday.Seasons.xml" />
+		<None Remove="Innovative.Holiday.Seasons.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
-	  <ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
+		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
+		<ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
 	</ItemGroup>
-
 </Project>

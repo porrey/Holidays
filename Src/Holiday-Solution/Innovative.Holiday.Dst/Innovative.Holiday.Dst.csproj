@@ -1,19 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>Daniel M. Porrey</Authors>
 		<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/porrey/Holidays</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/porrey/Holidays</RepositoryUrl>
+		<Copyright>Copyright © 2013-2022</Copyright>
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Defines date intervals for daylight savings start and end dates.</Description>
-		<Version>2.1.4</Version>
-		<FileVersion>2.1.4</FileVersion>
-		<AssemblyVersion>2.1.4</AssemblyVersion>
+		<Version>2.1.5</Version>
+		<FileVersion>2.1.5</FileVersion>
+		<AssemblyVersion>2.1.5</AssemblyVersion>
 		<PackageIcon>holiday-dst.png</PackageIcon>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -28,11 +28,12 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-	  <DocumentationFile>Innovative.Holiday.Dst.xml</DocumentationFile>
+		<DocumentationFile>Innovative.Holiday.Dst.xml</DocumentationFile>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Innovative.Holiday.Dst.xml" />
+		<None Remove="Innovative.Holiday.Dst.xml" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -41,10 +42,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\Images\holiday-dst.png">
-	    <Pack>True</Pack>
-	    <PackagePath></PackagePath>
-	  </None>
+		<None Include="..\..\..\Images\holiday-dst.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
 	</ItemGroup>
-
 </Project>

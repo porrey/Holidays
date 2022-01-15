@@ -1,4 +1,20 @@
-﻿using System;
+﻿//
+// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see http://www.gnu.org/licenses/.
+//
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Innovative.SystemTime;
@@ -12,9 +28,9 @@ namespace Innovative.DateInterval
 
 		static NthCalculatorManager()
 		{
-			// ***
-			// *** Load known calculators
-			// ***
+			//
+			// Load known calculators
+			//
 			_calculatorList = new INthCalculator[]
 			{
 				new NthDayOfMonth(),
@@ -26,9 +42,9 @@ namespace Innovative.DateInterval
 				new NthWeekDayOfTheYear(),
 			};
 
-			// ***
-			// *** Load the valid combinations
-			// ***
+			//
+			// Load the valid combinations
+			//
 			_validCombinations = new List<Combination>();
 
 			foreach (INthCalculator item in _calculatorList)
@@ -80,9 +96,9 @@ namespace Innovative.DateInterval
 		{
 			DateTime returnValue = DateTime.MinValue;
 
-			// ***
-			// *** Get the entry in the list
-			// ***
+			//
+			// Get the entry in the list
+			//
 			IEnumerable<Combination> qry = from tbl in NthCalculatorManager.ValidCombinations
 										   where tbl.Period == period &&
 										   tbl.Division == division
@@ -96,9 +112,9 @@ namespace Innovative.DateInterval
 					{
 						INthCalculator inth = qry.First().INthCalculator;
 
-						// ***
-						// *** Adjust N if -1 (indicates 'Last')
-						// ***
+						//
+						// Adjust N if -1 (indicates 'Last')
+						//
 						if (n == -1)
 						{
 							n = qry.First().N.Last();

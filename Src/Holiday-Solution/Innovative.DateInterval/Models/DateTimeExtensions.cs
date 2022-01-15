@@ -1,4 +1,20 @@
-﻿using Innovative.SystemTime;
+﻿//
+// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see http://www.gnu.org/licenses/.
+//
+using Innovative.SystemTime;
 
 namespace System
 {
@@ -19,15 +35,15 @@ namespace System
 		{
 			DateTime returnValue = item;
 
-			// ***
-			// *** Get the maximum days for a given month
-			// ***
+			//
+			// Get the maximum days for a given month
+			//
 			int maximumDays = DateTime.DaysInMonth(item.Year, item.Month);
 
-			// ***
-			// *** Normalize keeps the value with the
-			// *** allowable range
-			// ***
+			//
+			// Normalize keeps the value with the
+			// allowable range
+			//
 			if (day < 1 || day > maximumDays)
 			{
 				if (behavior == SpecificDayBehavior.AdjustForLast)
@@ -48,9 +64,9 @@ namespace System
 				}
 			}
 
-			// ***
-			// *** Create the date
-			// ***
+			//
+			// Create the date
+			//
 			returnValue = new DateTime(item.Year, item.Month, day);
 
 			return returnValue;

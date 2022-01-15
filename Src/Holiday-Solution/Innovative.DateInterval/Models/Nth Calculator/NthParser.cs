@@ -1,4 +1,20 @@
-﻿using System;
+﻿//
+// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see http://www.gnu.org/licenses/.
+//
+using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Innovative.SystemTime;
@@ -47,21 +63,21 @@ namespace Innovative.DateInterval
 		The_Week = 15,
 	}
 
-	// ***
-	// *** Format:
-	// ***
-	// *** [Interval] [Division] of|in [Period]
-	// *** 
-	// *** Possible values for Interval:
-	// *** First, Second, Third, Fourth, Fifth, Last, 1st, 2nd, 3rd, 4th, 5th, ... 365th
-	// ***
-	// *** Possible values for Division:
-	// *** Day, Week, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-	// *** 
-	// *** Possible values for Period:
-	// *** January, February, March, April, May, June, July, August, September, October, November, December
-	// *** the Year, the Month, the Week	
-	// ***
+	//
+	// Format:
+	//
+	// [Interval] [Division] of|in [Period]
+	// 
+	// Possible values for Interval:
+	// First, Second, Third, Fourth, Fifth, Last, 1st, 2nd, 3rd, 4th, 5th, ... 365th
+	//
+	// Possible values for Division:
+	// Day, Week, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+	// 
+	// Possible values for Period:
+	// January, February, March, April, May, June, July, August, September, October, November, December
+	// the Year, the Month, the Week	
+	//
 
 	public class NthParser
 	{
@@ -224,24 +240,24 @@ namespace Innovative.DateInterval
 			result = NthParser.Default;
 
 
-			// ***
-			// *** Join the Ordinal enumerator names with the | character into a string
-			// *** and build the Ordinal pattern
-			// ***
+			//
+			// Join the Ordinal enumerator names with the | character into a string
+			// and build the Ordinal pattern
+			//
 			string ordinalSection = String.Join("|", Enum.GetNames(typeof(Ordinal))).Replace("_", " ");
 			string ordinalPattern = string.Format(@"(?<Ordinal>({0})|([0-9]{{1,3}})(st|nd|rd|th))", ordinalSection);
 
-			// ***
-			// *** Join the Division enumerator names with the | character into a string
-			// *** and build the Division pattern
-			// ***
+			//
+			// Join the Division enumerator names with the | character into a string
+			// and build the Division pattern
+			//
 			string section2 = String.Join("|", Enum.GetNames(typeof(Division))).Replace("_", " ");
 			string divisionPattern = string.Format("(?<Division>({0}))", section2);
 
-			// ***
-			// *** Join the Period enumerator names with the | character into a string
-			// *** and build the Period pattern
-			// ***
+			//
+			// Join the Period enumerator names with the | character into a string
+			// and build the Period pattern
+			//
 			string section3 = String.Join("|", Enum.GetNames(typeof(Period))).Replace("_", " ");
 			string periodPattern = string.Format("(?<Period>({0}))", section3);
 
@@ -255,15 +271,15 @@ namespace Innovative.DateInterval
 
 				if (groups.Count >= 3)
 				{
-					// ***
-					// *** Used to convert strings to title case
-					// *** 
+					//
+					// Used to convert strings to title case
+					// 
 					CultureInfo cultureInfo = System.Threading.Thread.CurrentThread.CurrentCulture;
 					TextInfo textInfo = cultureInfo.TextInfo;
 
-					// ***
-					// *** Get the Ordinal
-					// ***
+					//
+					// Get the Ordinal
+					//
 					string interval = textInfo.ToTitleCase(groups["Ordinal"].Value).Replace(" ", "_");
 					Ordinal parsedValue = Ordinal.Other;
 
@@ -273,23 +289,23 @@ namespace Innovative.DateInterval
 					}
 					else
 					{
-						// ***
-						// *** Need to parse the integer. The right two characters will
-						// *** always be st, nd, rd or th
-						// ***
+						//
+						// Need to parse the integer. The right two characters will
+						// always be st, nd, rd or th
+						//
 						string intText = interval.Substring(0, interval.Length - 2);
 						result.N = int.Parse(intText);
 					}
 
-					// ***
-					// *** Get the Division
-					// ***
+					//
+					// Get the Division
+					//
 					string division = textInfo.ToTitleCase(groups["Division"].Value).Replace(" ", "_");
 					result.Division = (Division)Enum.Parse(typeof(Division), division, true);
 
-					// ***
-					// *** Get the Period
-					// ***
+					//
+					// Get the Period
+					//
 					string period = textInfo.ToTitleCase(groups["Period"].Value).Replace(" ", "_");
 					result.Period = (Period)Enum.Parse(typeof(Period), period, true);
 
@@ -304,9 +320,9 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				// ***
-				// ***The default is defined as Midnight
-				// ***
+				//
+				//The default is defined as Midnight
+				//
 				return new NthParser();
 			}
 		}
@@ -348,9 +364,9 @@ namespace Innovative.DateInterval
 			}
 			else
 			{
-				// ***
-				// *** There are always 4 occurrences
-				// ***
+				//
+				// There are always 4 occurrences
+				//
 				returnValue = 4;
 			}
 
@@ -362,12 +378,12 @@ namespace Innovative.DateInterval
 		{
 			string returnValue = string.Empty;
 
-			// ***
-			// *** If the number ends in 1 then st
-			// *** If the number ends in 2 then nd
-			// *** If the number ends in 3 then rd
-			// *** All other numbers are th
-			// ***
+			//
+			// If the number ends in 1 then st
+			// If the number ends in 2 then nd
+			// If the number ends in 3 then rd
+			// All other numbers are th
+			//
 			int lastDigit = n % 10;
 
 			if (lastDigit == 0)

@@ -1,21 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net45;net461;net472;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<RepositoryUrl>https://github.com/porrey/Holidays</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/porrey/Holidays</PackageProjectUrl>
-		<Copyright>Copyright © 2013-2020</Copyright>
+		<Copyright>Copyright © 2013-2022</Copyright>
 		<Authors>Daniel M. Porrey</Authors>
 		<Company>Daniel M. Porrey</Company>
 		<Description>Allows the creation of date intervals such as every 3rd Monday of the month.</Description>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<PackageIcon>date-interval.png</PackageIcon>
-		<Version>2.1.4</Version>
-		<FileVersion>2.1.4</FileVersion>
-		<AssemblyVersion>2.1.4</AssemblyVersion>
+		<Version>2.1.5</Version>
+		<FileVersion>2.1.5</FileVersion>
+		<AssemblyVersion>2.1.5</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
@@ -27,24 +27,23 @@
 	<PropertyGroup>
 		<NoWarn>1701;1702;1591</NoWarn>
 	</PropertyGroup>
-	
-	
+
 	<PropertyGroup>
-	  <DocumentationFile>Innovative.DateInterval.xml</DocumentationFile>
+		<DocumentationFile>Innovative.DateInterval.xml</DocumentationFile>
 	</PropertyGroup>
-	
+
 	<ItemGroup>
-	  <None Remove="Innovative.DateInterval.xml" />
+		<None Remove="Innovative.DateInterval.xml" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
-	  <ProjectReference Include="..\Innovative.SystemTime\Innovative.SystemTime.csproj" />
+		<ProjectReference Include="..\Innovative.SystemTime\Innovative.SystemTime.csproj" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
-	  <None Include="..\..\..\Images\date-interval.png">
-	    <Pack>True</Pack>
-	    <PackagePath></PackagePath>
-	  </None>
+		<None Include="..\..\..\Images\date-interval.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
 	</ItemGroup>
 </Project>

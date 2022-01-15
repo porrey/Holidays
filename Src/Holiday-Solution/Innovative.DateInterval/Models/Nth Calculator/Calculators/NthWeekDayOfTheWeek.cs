@@ -1,4 +1,20 @@
-﻿using System;
+﻿//
+// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// 
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published
+// by the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// 
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU Lesser General Public License for more details.
+// 
+// You should have received a copy of the GNU Lesser General Public License
+// along with this program. If not, see http://www.gnu.org/licenses/.
+//
+using System;
 using System.Linq;
 using Innovative.SystemTime;
 
@@ -10,7 +26,7 @@ namespace Innovative.DateInterval
 		{
 			this.ValidCombinations = new Combination[]
 			{		
-				// *** The Week, Specific Day, 1 (example: 1st Monday of the Week) [Not very useful but valid; like saying "every Monday"]
+				// The Week, Specific Day, 1 (example: 1st Monday of the Week) [Not very useful but valid; like saying "every Monday"]
 				new Combination() { Period = Period.The_Week, Division = Division.Sunday, N = Enumerable.Range(1, 1), INthCalculator = this },
 				new Combination() { Period = Period.The_Week, Division = Division.Monday, N = Enumerable.Range(1, 1), INthCalculator = this },
 				new Combination() { Period = Period.The_Week, Division = Division.Tuesday, N = Enumerable.Range(1, 1), INthCalculator = this },
@@ -25,21 +41,21 @@ namespace Innovative.DateInterval
 		{
 			DateTime returnValue = DateTime.Now.SetTime(time);
 
-			// ***
-			// *** Target day of week
-			// ***
+			//
+			// Target day of week
+			//
 			int dayofweek = (int)division;
 
-			// ***
-			// *** Calculate the difference in days between today and n
-			// ***
+			//
+			// Calculate the difference in days between today and n
+			//
 			int difference = ((int)returnValue.DayOfWeek - dayofweek);
 
-			// ***
-			// *** Adjust the current day by the day difference
-			// *** between today and n always going forward in
-			// *** time.
-			// ***
+			//
+			// Adjust the current day by the day difference
+			// between today and n always going forward in
+			// time.
+			//
 			if (difference < 0)
 			{
 				returnValue = returnValue.AddDays(difference);
@@ -49,9 +65,9 @@ namespace Innovative.DateInterval
 				returnValue = returnValue.AddDays(7 - difference);
 			}
 
-			// ***
-			// *** Never return a day in the past
-			// ***
+			//
+			// Never return a day in the past
+			//
 			if (returnValue < DateTime.Now)
 			{
 				returnValue.AddMonths(1);
@@ -64,9 +80,9 @@ namespace Innovative.DateInterval
 		{
 			DateTime returnValue = DateTime.MinValue;
 
-			// ***
-			// *** Index adds/removes 7 days
-			// ***
+			//
+			// Index adds/removes 7 days
+			//
 			int numberOfDays = index * 7;
 			returnValue = next.AddDays(numberOfDays);
 
