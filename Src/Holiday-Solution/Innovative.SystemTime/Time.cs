@@ -1,5 +1,5 @@
 ﻿//
-// Copyright(C) 2013-2022, Daniel M. Porrey. All rights reserved.
+// Copyright(C) 2013-2024, Daniel M. Porrey. All rights reserved.
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Lesser General Public License as published
@@ -16,9 +16,6 @@
 //
 using System;
 using System.Runtime.Serialization;
-#if !NET5_0 && !NET6_0
-using System.Security.Permissions;
-#endif
 
 namespace Innovative.SystemTime
 {
@@ -85,7 +82,7 @@ namespace Innovative.SystemTime
 			return this.TimeSpan.GetHashCode();
 		}
 
-#region Static Members
+		#region Static Members
 		public static Time Parse(string s)
 		{
 			Time returnValue = Time.Empty;
@@ -125,7 +122,7 @@ namespace Innovative.SystemTime
 			}
 		}
 
-#region Implicit Conversions
+		#region Implicit Conversions
 		public static implicit operator string(Time value)
 		{
 			return value.ToString();
@@ -155,9 +152,9 @@ namespace Innovative.SystemTime
 		{
 			return new Time(value);
 		}
-#endregion
+		#endregion
 
-#region Time/Time
+		#region Time/Time
 		public static Time operator +(Time t1, Time t2)
 		{
 			Time returnValue = Time.Empty;
@@ -180,36 +177,36 @@ namespace Innovative.SystemTime
 
 		public static bool operator ==(Time t1, Time t2)
 		{
-			return (t1.TimeSpan == t2.TimeSpan);
+			return t1.TimeSpan == t2.TimeSpan;
 		}
 
 		public static bool operator !=(Time t1, Time t2)
 		{
-			return (t1.TimeSpan != t2.TimeSpan);
+			return t1.TimeSpan != t2.TimeSpan;
 		}
 
 		public static bool operator <(Time t1, Time t2)
 		{
-			return (t1.TimeSpan < t2.TimeSpan);
+			return t1.TimeSpan < t2.TimeSpan;
 		}
 
 		public static bool operator <=(Time t1, Time t2)
 		{
-			return (t1.TimeSpan <= t2.TimeSpan);
+			return t1.TimeSpan <= t2.TimeSpan;
 		}
 
 		public static bool operator >(Time t1, Time t2)
 		{
-			return (t1.TimeSpan > t2.TimeSpan);
+			return t1.TimeSpan > t2.TimeSpan;
 		}
 
 		public static bool operator >=(Time t1, Time t2)
 		{
-			return (t1.TimeSpan >= t2.TimeSpan);
+			return t1.TimeSpan >= t2.TimeSpan;
 		}
-#endregion
+		#endregion
 
-#region Time/TimeSpan
+		#region Time/TimeSpan
 		public static Time operator +(Time t1, TimeSpan t2)
 		{
 			Time returnValue = Time.Empty;
@@ -232,36 +229,36 @@ namespace Innovative.SystemTime
 
 		public static bool operator ==(Time t1, TimeSpan t2)
 		{
-			return (t1.TimeSpan == t2);
+			return t1.TimeSpan == t2;
 		}
 
 		public static bool operator !=(Time t1, TimeSpan t2)
 		{
-			return (t1.TimeSpan != t2);
+			return t1.TimeSpan != t2;
 		}
 
 		public static bool operator <(Time t1, TimeSpan t2)
 		{
-			return (t1.TimeSpan < t2);
+			return t1.TimeSpan < t2;
 		}
 
 		public static bool operator <=(Time t1, TimeSpan t2)
 		{
-			return (t1.TimeSpan <= t2);
+			return t1.TimeSpan <= t2;
 		}
 
 		public static bool operator >(Time t1, TimeSpan t2)
 		{
-			return (t1.TimeSpan > t2);
+			return t1.TimeSpan > t2;
 		}
 
 		public static bool operator >=(Time t1, TimeSpan t2)
 		{
-			return (t1.TimeSpan >= t2);
+			return t1.TimeSpan >= t2;
 		}
-#endregion
+		#endregion
 
-#region TimeSpan/Time
+		#region TimeSpan/Time
 		public static Time operator +(TimeSpan t1, Time t2)
 		{
 			Time returnValue = Time.Empty;
@@ -284,36 +281,36 @@ namespace Innovative.SystemTime
 
 		public static bool operator ==(TimeSpan t1, Time t2)
 		{
-			return (t1 == t2.TimeSpan);
+			return t1 == t2.TimeSpan;
 		}
 
 		public static bool operator !=(TimeSpan t1, Time t2)
 		{
-			return (t1 != t2.TimeSpan);
+			return t1 != t2.TimeSpan;
 		}
 
 		public static bool operator <(TimeSpan t1, Time t2)
 		{
-			return (t1 < t2.TimeSpan);
+			return t1 < t2.TimeSpan;
 		}
 
 		public static bool operator <=(TimeSpan t1, Time t2)
 		{
-			return (t1 <= t2.TimeSpan);
+			return t1 <= t2.TimeSpan;
 		}
 
 		public static bool operator >(TimeSpan t1, Time t2)
 		{
-			return (t1 > t2.TimeSpan);
+			return t1 > t2.TimeSpan;
 		}
 
 		public static bool operator >=(TimeSpan t1, Time t2)
 		{
-			return (t1 >= t2.TimeSpan);
+			return t1 >= t2.TimeSpan;
 		}
-#endregion
+		#endregion
 
-#region Time/DateTime
+		#region Time/DateTime
 		public static Time operator +(Time t1, DateTime t2)
 		{
 			Time returnValue = Time.Empty;
@@ -336,36 +333,36 @@ namespace Innovative.SystemTime
 
 		public static bool operator ==(Time t1, DateTime t2)
 		{
-			return (t1.TimeSpan == t2.TimeOfDay);
+			return t1.TimeSpan == t2.TimeOfDay;
 		}
 
 		public static bool operator !=(Time t1, DateTime t2)
 		{
-			return (t1.TimeSpan != t2.TimeOfDay);
+			return t1.TimeSpan != t2.TimeOfDay;
 		}
 
 		public static bool operator <(Time t1, DateTime t2)
 		{
-			return (t1.TimeSpan < t2.TimeOfDay);
+			return t1.TimeSpan < t2.TimeOfDay;
 		}
 
 		public static bool operator <=(Time t1, DateTime t2)
 		{
-			return (t1.TimeSpan <= t2.TimeOfDay);
+			return t1.TimeSpan <= t2.TimeOfDay;
 		}
 
 		public static bool operator >(Time t1, DateTime t2)
 		{
-			return (t1.TimeSpan > t2.TimeOfDay);
+			return t1.TimeSpan > t2.TimeOfDay;
 		}
 
 		public static bool operator >=(Time t1, DateTime t2)
 		{
-			return (t1.TimeSpan >= t2.TimeOfDay);
+			return t1.TimeSpan >= t2.TimeOfDay;
 		}
-#endregion
+		#endregion
 
-#region DateTime/Time
+		#region DateTime/Time
 		public static Time operator +(DateTime d1, Time t2)
 		{
 			Time returnValue = Time.Empty;
@@ -388,37 +385,37 @@ namespace Innovative.SystemTime
 
 		public static bool operator ==(DateTime d1, Time t2)
 		{
-			return (d1.TimeOfDay == t2.TimeSpan);
+			return d1.TimeOfDay == t2.TimeSpan;
 		}
 
 		public static bool operator !=(DateTime d1, Time t2)
 		{
-			return (d1.TimeOfDay != t2.TimeSpan);
+			return d1.TimeOfDay != t2.TimeSpan;
 		}
 
 		public static bool operator <(DateTime d1, Time t2)
 		{
-			return (d1.TimeOfDay < t2.TimeSpan);
+			return d1.TimeOfDay < t2.TimeSpan;
 		}
 
 		public static bool operator <=(DateTime d1, Time t2)
 		{
-			return (d1.TimeOfDay <= t2.TimeSpan);
+			return d1.TimeOfDay <= t2.TimeSpan;
 		}
 
 		public static bool operator >(DateTime d1, Time t2)
 		{
-			return (d1.TimeOfDay > t2.TimeSpan);
+			return d1.TimeOfDay > t2.TimeSpan;
 		}
 
 		public static bool operator >=(DateTime d1, Time t2)
 		{
-			return (d1.TimeOfDay >= t2.TimeSpan);
+			return d1.TimeOfDay >= t2.TimeSpan;
 		}
-#endregion
-#endregion
+		#endregion
+		#endregion
 
-#region IComparable
+		#region IComparable
 		public int CompareTo(object obj)
 		{
 			int returnValue = -1;
@@ -430,40 +427,37 @@ namespace Innovative.SystemTime
 
 			return returnValue;
 		}
-#endregion
+		#endregion
 
-#region IFormattable
+		#region IFormattable
 		public string ToString(string format, IFormatProvider formatProvider)
 		{
 			return this.Date.ToString(format, formatProvider);
 		}
-#endregion
+		#endregion
 
-#region IComparable<Time>
+		#region IComparable<Time>
 		public int CompareTo(Time other)
 		{
 			return this.TimeSpan.CompareTo(other.TimeSpan);
 		}
-#endregion
+		#endregion
 
-#region IEquatable<Time>
+		#region IEquatable<Time>
 		public bool Equals(Time other)
 		{
 			return this.Equals(other);
 		}
-#endregion
+		#endregion
 
-#region ICloneable
+		#region ICloneable
 		public object Clone()
 		{
 			return new Time(this.TimeSpan);
 		}
-#endregion region
+		#endregion region
 
-#region ISerializable
-#if !NET5_0 && !NET6_0
-		[SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-#endif
+		#region ISerializable
 		public void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
 			if (info != null)
@@ -475,6 +469,6 @@ namespace Innovative.SystemTime
 				throw new ArgumentNullException("info");
 			}
 		}
-#endregion
+		#endregion
 	}
 }
