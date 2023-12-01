@@ -14,11 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Innovative.Holiday
 {
 	public static class DateTimeOffsetExtensions
@@ -35,7 +30,7 @@ namespace Innovative.Holiday
 
 		public static IEnumerable<IHoliday> GetHoliday(this DateTimeOffset? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
-			IEnumerable<IHoliday> returnValue = new IHoliday[0];
+			IEnumerable<IHoliday> returnValue = Array.Empty<IHoliday>();
 
 			if (value.HasValue)
 			{

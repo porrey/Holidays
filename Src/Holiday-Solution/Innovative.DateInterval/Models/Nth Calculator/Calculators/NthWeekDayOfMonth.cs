@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -27,101 +25,101 @@ namespace Innovative.DateInterval
 			this.ValidCombinations = new Combination[]
 			{		
 				// January, Specific Day, 1 - 5 (example: 4th Monday of January)
-				new Combination() { Period = Period.January, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.January, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.January, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.January, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.January, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.January, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.January, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.January, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// February, Specific Day, 1 - 5 (example: 4th Monday of February)
-				new Combination() { Period = Period.February, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.February, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.February, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.February, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.February, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.February, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.February, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.February, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// March, Specific Day, 1 - 5 (example: 4th Monday of March)
-				new Combination() { Period = Period.March, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.March, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.March, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.March, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.March, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.March, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.March, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.March, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// April, Specific Day, 1 - 5 (example: 4th Monday of April)
-				new Combination() { Period = Period.April, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.April, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.April, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.April, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.April, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.April, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.April, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.April, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// May, Specific Day, 1 - 5 (example: 4th Monday of May)
-				new Combination() { Period = Period.May, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.May, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.May, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.May, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.May, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.May, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.May, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.May, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// June, Specific Day, 1 - 5 (example: 4th Monday of June)
-				new Combination() { Period = Period.June, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.June, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.June, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.June, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.June, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.June, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.June, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.June, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// July, Specific Day, 1 - 5 (example: 4th Monday of July)
-				new Combination() { Period = Period.July, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.July, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.July, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.July, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.July, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.July, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.July, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.July, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// August, Specific Day, 1 - 5 (example: 4th Monday of August)
-				new Combination() { Period = Period.August, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.August, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.August, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.August, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.August, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.August, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.August, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.August, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// September, Specific Day, 1 - 5 (example: 4th Monday of September)
-				new Combination() { Period = Period.September, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.September, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.September, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.September, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.September, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.September, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.September, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.September, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// October, Specific Day, 1 - 5 (example: 4th Monday of October)
-				new Combination() { Period = Period.October, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.October, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.October, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.October, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.October, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.October, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.October, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.October, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// November, Specific Day, 1 - 5 (example: 4th Monday of November)
-				new Combination() { Period = Period.November, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.November, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.November, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.November, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.November, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.November, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.November, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.November, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this },
 				// December, Specific Day, 1 - 5 (example: 4th Monday of December)
-				new Combination() { Period = Period.December, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.December, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.December, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.December, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.December, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.December, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.December, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this }
+				new() { Period = Period.December, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.December, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.December, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.December, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.December, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.December, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.December, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this }
 			};
 		}
 
@@ -145,7 +143,7 @@ namespace Innovative.DateInterval
 			//
 			// Calculate the date
 			//
-			returnValue = this._GetDate(year, month, division, n).SetTime(time);
+			returnValue = this.GetDate(year, month, division, n).SetTime(time);
 
 			//
 			// Adjust if in the past
@@ -164,23 +162,23 @@ namespace Innovative.DateInterval
 
 			int year = next.Year + index;
 			int month = next.Month;
-			Division division = (Division)((int)next.DayOfWeek);
+			Division division = (Division)(int)next.DayOfWeek;
 
 			//
 			// The next date needs to be recalculated
 			//
-			returnValue = this._GetDate(year, month, division, n).SetTime(next.TimeOfDay);
+			returnValue = this.GetDate(year, month, division, n).SetTime(next.TimeOfDay);
 
 			return returnValue;
 		}
 
-		private DateTime _GetDate(int year, int month, Division division, int n)
+		private DateTime GetDate(int year, int month, Division division, int n)
 		{
 			DateTime returnValue = DateTime.MinValue;
 			//
 			// Get the first day of the month and then adjust the date
 			//
-			DateTime firstDayOfMonth = new DateTime(year, month, 1);
+			DateTime firstDayOfMonth = new(year, month, 1);
 			int dayOfWeek = (int)division;
 
 			int dayDifference = 0;

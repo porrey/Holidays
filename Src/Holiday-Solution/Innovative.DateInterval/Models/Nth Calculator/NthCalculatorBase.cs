@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -31,16 +30,16 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				if (_combinations == null)
+				if (this._combinations == null)
 				{
 					this.OnLoadCombinations();
 				}
 
-				return _combinations;
+				return this._combinations;
 			}
 			internal set
 			{
-				_combinations = value;
+				this._combinations = value;
 			}
 		}
 

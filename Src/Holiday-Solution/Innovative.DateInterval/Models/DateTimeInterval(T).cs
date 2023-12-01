@@ -14,9 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Collections.Generic;
-
 namespace Innovative.DateInterval
 {
 	public abstract class DateTimeInterval<T> : DateTimeInterval, IValue<T>, IDateTimeIntervalStringConverter<T>
@@ -43,13 +40,13 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				return _innerValue;
+				return this._innerValue;
 			}
 			set
 			{
 				if (this.IsValidRange(value))
 				{
-					_innerValue = value;
+					this._innerValue = value;
 				}
 				else
 				{
@@ -132,7 +129,7 @@ namespace Innovative.DateInterval
 
 		public static IEnumerable<K> ParseList<K>(string list) where K : DateTimeInterval<T>, new()
 		{
-			List<K> returnValue = new List<K>();
+			List<K> returnValue = new();
 
 			//
 			// Parse the string
@@ -143,7 +140,7 @@ namespace Innovative.DateInterval
 
 			foreach (string item in items)
 			{
-				K iDateTimeInterval = new K();
+				K iDateTimeInterval = new();
 				((IValue<T>)iDateTimeInterval).Value = iDateTimeInterval.FromString(item);
 				returnValue.Add(iDateTimeInterval);
 			}

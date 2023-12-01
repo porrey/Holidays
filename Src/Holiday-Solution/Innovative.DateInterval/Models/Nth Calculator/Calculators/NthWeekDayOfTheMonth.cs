@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -27,13 +25,13 @@ namespace Innovative.DateInterval
 			this.ValidCombinations = new Combination[]
 			{
 				// The Month, Specific Day, 1 - 5 (example: 4th Monday of the Month)
-				new Combination() { Period = Period.The_Month, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.The_Month, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.The_Month, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.The_Month, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.The_Month, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.The_Month, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
-				new Combination() { Period = Period.The_Month, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this }
+				new() { Period = Period.The_Month, Division = Division.Sunday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.The_Month, Division = Division.Monday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.The_Month, Division = Division.Tuesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.The_Month, Division = Division.Wednesday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.The_Month, Division = Division.Thursday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.The_Month, Division = Division.Friday, N = Enumerable.Range(1, 5), INthCalculator = this },
+				new() { Period = Period.The_Month, Division = Division.Saturday, N = Enumerable.Range(1, 5), INthCalculator = this }
 			};
 		}
 
@@ -52,7 +50,7 @@ namespace Innovative.DateInterval
 			//
 			// Calculate the date
 			//
-			returnValue = this._GetDate(year, month, division, n).SetTime(time);
+			returnValue = this.GetDate(year, month, division, n).SetTime(time);
 
 			//
 			// Adjust if in the past
@@ -70,25 +68,25 @@ namespace Innovative.DateInterval
 			DateTime returnValue = DateTime.MinValue;
 
 			int year = next.Year;
-			int month = next.Month + index;			
-			Division division = (Division)((int)next.DayOfWeek);
+			int month = next.Month + index;
+			Division division = (Division)(int)next.DayOfWeek;
 
 			//
 			// The next date needs to be recalculated
 			//
-			returnValue = this._GetDate(year, month, division, n).SetTime(next.TimeOfDay);
+			returnValue = this.GetDate(year, month, division, n).SetTime(next.TimeOfDay);
 
 			return returnValue;
 		}
 
-		private DateTime _GetDate(int year, int month, Division division, int n)
+		private DateTime GetDate(int year, int month, Division division, int n)
 		{
 			DateTime returnValue = DateTime.MinValue;
 
 			//
 			// Get the first day of the month and then adjust the date
 			//
-			DateTime firstDayOfMonth = new DateTime(year, month, 1);
+			DateTime firstDayOfMonth = new(year, month, 1);
 			int dayOfWeek = (int)division;
 
 			int dayDifference = 0;

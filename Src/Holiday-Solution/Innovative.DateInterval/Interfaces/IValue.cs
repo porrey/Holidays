@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Innovative.DateInterval
+﻿namespace Innovative.DateInterval
 {
 	public interface IValue<T>
 	{

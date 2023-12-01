@@ -14,9 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace Innovative.Holiday
 {
 	/// <summary>
@@ -24,6 +21,31 @@ namespace Innovative.Holiday
 	/// </summary>
 	public class HolidayList : List<IHoliday>, IHolidayList
 	{
+		/// <summary>
+		/// Initialize and empty list.
+		/// </summary>
+		public HolidayList()
+		{
+		}
+
+		/// <summary>
+		/// Initialize the list with a list of holidays.
+		/// </summary>
+		/// <param name="holidays">A list of holidays.</param>
+		public HolidayList(IEnumerable<IHoliday> holidays)
+		{
+			this.AddRange(holidays);
+		}
+
+		/// <summary>
+		/// Initialize the list with a list of holidays.
+		/// </summary>
+		/// <param name="holidays">A list of holidays.</param>
+		public HolidayList(params IHoliday[] holidays)
+		{
+			this.AddRange(holidays);
+		}
+
 		/// <summary>
 		/// Adds a <see cref="IHoliday"/> to the list.
 		/// </summary>

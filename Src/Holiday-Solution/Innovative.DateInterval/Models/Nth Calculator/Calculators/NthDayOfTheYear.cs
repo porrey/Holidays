@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -27,7 +25,7 @@ namespace Innovative.DateInterval
 			this.ValidCombinations = new Combination[]
 			{		
 				// The Year, Day, 1 -366 (example: 55th Day of the Year)
-				new Combination() { Period = Period.The_Year, Division = Division.Day, N = Enumerable.Range(1, 366), INthCalculator = this }
+				new() { Period = Period.The_Year, Division = Division.Day, N = Enumerable.Range(1, 366), INthCalculator = this }
 			};
 		}
 
@@ -43,7 +41,7 @@ namespace Innovative.DateInterval
 			//
 			// Start with the first day of the year
 			//
-			returnValue = (new DateTime(year, 1, 1)).SetTime(time);
+			returnValue = new DateTime(year, 1, 1).SetTime(time);
 
 			//
 			// Adjust N for a leap year
@@ -73,7 +71,7 @@ namespace Innovative.DateInterval
 		{
 			DateTime returnValue = DateTime.MinValue;
 
-			int year = next.Year + index;			
+			int year = next.Year + index;
 
 			//
 			// Adjust N for a leap year

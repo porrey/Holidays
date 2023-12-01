@@ -14,34 +14,16 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Diamond.Core.Extensions.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace Innovative.Holiday.Example
 {
 	class Program
 	{
-		static void Main(string[] args)
-		{
-			//
-			// Register the holidays.
-			//
-			Holidays.Register(Us.Federal.All.Items, Us.Other.All.Items, Religious.Christian.All.Items);
-
-			//
-			// Create a date/time instance.
-			//
-			DateTime dt = new(2020, 9, 7);
-
-			//
-			// Check if the date is a holiday.
-			//
-			bool isHoliday = dt.IsHoliday(HolidayOccurrenceType.Observed);
-			Console.WriteLine($"The date {dt.Date.ToShortDateString()} {(isHoliday ? "is" : " is NOT ")} a holiday.");
-
-			IEnumerable<IHoliday> holidays = dt.GetHoliday(HolidayOccurrenceType.Actual);
-			Console.WriteLine($"The holiday is {holidays.First().Name}");
-		}
+		static void Main(string[] args) => Host.CreateDefaultBuilder(args)
+				.UseStartup<ConsoleStartup>()
+				.Build()
+				.Run();
 	}
 }

@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +22,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("");
 
-		protected override DateTime OnGetDateTime(int index)=> _calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "";
 		public override string Name => "";
 		public override string ObservanceRule => "";

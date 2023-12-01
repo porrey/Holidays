@@ -14,7 +14,8 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
+// Ignore Spelling: Juneteenth
+
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +24,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("6/19");
 
-		protected override DateTime OnGetDateTime(int index)=>_calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "Juneteenth is an annual observance on June 19 to remember when Union soldiers enforced the Emancipation Proclamation and freed all remaining slaves in Texas on June 19, 1865. This day is an opportunity for people to celebrate freedom and equal rights in the United States.";
 		public override string Name => "Juneteenth ";
 		public override string ObservanceRule => "June 19th";

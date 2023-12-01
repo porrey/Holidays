@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using Innovative.SystemTime;
@@ -125,12 +124,12 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				return _n;
+				return this._n;
 			}
 			set
 			{
-				_n = value;
-				_ordinal = NthParser.GetOrdinal(value);
+				this._n = value;
+				this._ordinal = NthParser.GetOrdinal(value);
 			}
 		}
 
@@ -146,12 +145,12 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				return _ordinal;
+				return this._ordinal;
 			}
 			set
 			{
-				_ordinal = value;
-				_n = NthParser.GetN(value);
+				this._ordinal = value;
+				this._n = NthParser.GetN(value);
 			}
 		}
 
@@ -159,11 +158,11 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				return _period;
+				return this._period;
 			}
 			set
 			{
-				_period = value;
+				this._period = value;
 			}
 		}
 
@@ -171,11 +170,11 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				return _division;
+				return this._division;
 			}
 			set
 			{
-				_division = value;
+				this._division = value;
 			}
 		}
 
@@ -183,11 +182,11 @@ namespace Innovative.DateInterval
 		{
 			get
 			{
-				return _time;
+				return this._time;
 			}
 			set
 			{
-				_time = value;
+				this._time = value;
 			}
 		}
 
@@ -239,7 +238,6 @@ namespace Innovative.DateInterval
 			bool returnValue = false;
 			result = NthParser.Default;
 
-
 			//
 			// Join the Ordinal enumerator names with the | character into a string
 			// and build the Ordinal pattern
@@ -262,7 +260,7 @@ namespace Innovative.DateInterval
 			string periodPattern = string.Format("(?<Period>({0}))", section3);
 
 			string pattern = string.Format(@"({0}\s{1}\s(of|in)\s{2})", ordinalPattern, divisionPattern, periodPattern);
-			Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+			Regex regex = new(pattern, RegexOptions.IgnoreCase);
 			MatchCollection matches = regex.Matches(s);
 
 			if (matches.Count > 0)
@@ -341,7 +339,7 @@ namespace Innovative.DateInterval
 
 			int daysInMonth = DateTime.DaysInMonth(year, month);
 			int extraDays = daysInMonth % 7;
-			DayOfWeek firstDayOfMonth = (new DateTime(year, month, 1)).DayOfWeek;
+			DayOfWeek firstDayOfMonth = new DateTime(year, month, 1).DayOfWeek;
 
 			if (extraDays > 0)
 			{
@@ -349,11 +347,11 @@ namespace Innovative.DateInterval
 				{
 					returnValue = 5;
 				}
-				else if (extraDays == 2 && (day == firstDayOfMonth || day == (firstDayOfMonth.AddDays(1))))
+				else if (extraDays == 2 && (day == firstDayOfMonth || day == firstDayOfMonth.AddDays(1)))
 				{
 					returnValue = 5;
 				}
-				else if (extraDays == 3 && (day == firstDayOfMonth || day == (firstDayOfMonth.AddDays(1)) || day == (firstDayOfMonth.AddDays(2))))
+				else if (extraDays == 3 && (day == firstDayOfMonth || day == firstDayOfMonth.AddDays(1) || day == firstDayOfMonth.AddDays(2)))
 				{
 					returnValue = 5;
 				}
@@ -369,7 +367,6 @@ namespace Innovative.DateInterval
 				//
 				returnValue = 4;
 			}
-
 
 			return returnValue;
 		}

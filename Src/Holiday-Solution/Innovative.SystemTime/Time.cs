@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using System.Runtime.Serialization;
 
 namespace Innovative.SystemTime
@@ -60,12 +59,12 @@ namespace Innovative.SystemTime
 			}
 		}
 
-		public override string ToString()
+		public override readonly string ToString()
 		{
 			return ((DateTime)this).ToLongTimeString();
 		}
 
-		public override bool Equals(object obj)
+		public override readonly bool Equals(object obj)
 		{
 			bool returnValue = false;
 
@@ -77,7 +76,7 @@ namespace Innovative.SystemTime
 			return returnValue;
 		}
 
-		public override int GetHashCode()
+		public override readonly int GetHashCode()
 		{
 			return this.TimeSpan.GetHashCode();
 		}
@@ -458,7 +457,7 @@ namespace Innovative.SystemTime
 		#endregion region
 
 		#region ISerializable
-		public void GetObjectData(SerializationInfo info, StreamingContext context)
+		public readonly void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
 			if (info != null)
 			{

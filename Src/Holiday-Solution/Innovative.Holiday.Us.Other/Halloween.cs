@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +22,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("10/31");
 
-		protected override DateTime OnGetDateTime(int index) => _calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "Originally the end of the Celtic year, it now celebrates Eve of All Saint's Day.";
 		public override string Name => "Halloween";
 		public override string ObservanceRule => "October 31st";

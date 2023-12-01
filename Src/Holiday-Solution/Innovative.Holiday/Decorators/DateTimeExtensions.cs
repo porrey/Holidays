@@ -14,18 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Innovative.Holiday
 {
 	public static class DateTimeExtensions
 	{
 		public static IEnumerable<IHoliday> GetHoliday(this DateTime value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
-			IEnumerable<IHoliday> returnValue = new IHoliday[0];
+			IEnumerable<IHoliday> returnValue = Array.Empty<IHoliday>();
 
 			if (holidayOccurrenceType == HolidayOccurrenceType.Actual)
 			{
@@ -36,15 +31,15 @@ namespace Innovative.Holiday
 			if (holidayOccurrenceType == HolidayOccurrenceType.Observed)
 			{
 				returnValue = (from tbl in Holidays.MyHolidays
-							   where tbl is IObservedHoliday &&
-							   ((IObservedHoliday)tbl).GetObservedByYear(value.Year) == value.Date
+							   where tbl is IObservedHoliday holiday &&
+							   holiday.GetObservedByYear(value.Year) == value.Date
 							   select tbl).ToArray();
 			}
 			else
 			{
 				returnValue = (from tbl in Holidays.MyHolidays
 							   where tbl.GetByYear(value.Year) == value.Date ||
-							  (tbl is IObservedHoliday && ((IObservedHoliday)tbl).GetObservedByYear(value.Year) == value.Date)
+							  (tbl is IObservedHoliday holiday && holiday.GetObservedByYear(value.Year) == value.Date)
 							   select tbl).ToArray();
 			}
 
@@ -58,7 +53,7 @@ namespace Innovative.Holiday
 
 		public static IEnumerable<IHoliday> GetHoliday(this DateTime? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
-			IEnumerable<IHoliday> returnValue = new IHoliday[0];
+			IEnumerable<IHoliday> returnValue = Array.Empty<IHoliday>();
 
 			if (value.HasValue)
 			{
@@ -75,7 +70,7 @@ namespace Innovative.Holiday
 
 		public static bool IsHoliday(this DateTime value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
-			return (value.GetHoliday(holidayOccurrenceType).Any());
+			return value.GetHoliday(holidayOccurrenceType).Any();
 		}
 
 		public static Task<bool> IsHolidayAsync(this DateTime value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)

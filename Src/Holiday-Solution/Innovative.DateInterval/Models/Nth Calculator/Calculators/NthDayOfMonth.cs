@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -27,7 +25,7 @@ namespace Innovative.DateInterval
 			this.ValidCombinations = new Combination[]
 			{		
 				// The Month, Day, 1 - 31 (example: 3rd Day of the Month)
-				new Combination() { Period = Period.The_Month, Division = Division.Day, N = Enumerable.Range(1, 31), INthCalculator = this }
+				new() { Period = Period.The_Month, Division = Division.Day, N = Enumerable.Range(1, 31), INthCalculator = this }
 			};
 		}
 
@@ -45,7 +43,7 @@ namespace Innovative.DateInterval
 			// AdjustForLast will adjust for a month with less than n days (for
 			// example if n = 31 it will use 30)
 			//
-			returnValue = (new DateTime(year, month, 1).SpecifyDayOfMonth(n, SpecificDayBehavior.AdjustForLast)).SetTime(time);
+			returnValue = new DateTime(year, month, 1).SpecifyDayOfMonth(n, SpecificDayBehavior.AdjustForLast).SetTime(time);
 
 			//
 			// Never return a day in the past

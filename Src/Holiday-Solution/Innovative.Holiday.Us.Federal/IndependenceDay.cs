@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +22,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("7/4");
 
-		protected override DateTime OnGetDateTime(int index) => _calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "Celebrates the adoption of the Declaration of Independence. Also popularly known as the Fourth of July.";
 		public override string Name => "Independence Day";
 		public override string ObservanceRule => "July 4th";

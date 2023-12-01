@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-
 namespace Innovative.Holiday
 {
 	/// <summary>
@@ -23,7 +21,7 @@ namespace Innovative.Holiday
 	/// on a Saturday, it is observed on the previous Friday. If the holiday falls on
 	/// a Sunday, it is observed on the next Monday. 
 	/// </summary>
-	public class FederalHolidayRule: IObservedHolidayRule
+	public class FederalHolidayRule : IObservedHolidayRule
 	{
 		/// <summary>
 		/// Returns an adjusted date.

@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +22,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("12/31");
 
-		protected override DateTime OnGetDateTime(int index) => _calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "A celebration of the final day of the year usually in the evening and leading into the new year.";
 		public override string Name => "New Year's Eve";
 		public override string ObservanceRule => "December 31st";

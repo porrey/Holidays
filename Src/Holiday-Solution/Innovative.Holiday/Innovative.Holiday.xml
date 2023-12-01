@@ -140,6 +140,23 @@
             A list of holidays.
             </summary>
         </member>
+        <member name="M:Innovative.Holiday.HolidayList.#ctor">
+            <summary>
+            Initialize and empty list.
+            </summary>
+        </member>
+        <member name="M:Innovative.Holiday.HolidayList.#ctor(System.Collections.Generic.IEnumerable{Innovative.Holiday.IHoliday})">
+            <summary>
+            Initialize the list with a list of holidays.
+            </summary>
+            <param name="holidays">A list of holidays.</param>
+        </member>
+        <member name="M:Innovative.Holiday.HolidayList.#ctor(Innovative.Holiday.IHoliday[])">
+            <summary>
+            Initialize the list with a list of holidays.
+            </summary>
+            <param name="holidays">A list of holidays.</param>
+        </member>
         <member name="M:Innovative.Holiday.HolidayList.AddAsync(Innovative.Holiday.IHoliday)">
             <summary>
             Adds a <see cref="T:Innovative.Holiday.IHoliday"/> to the list.

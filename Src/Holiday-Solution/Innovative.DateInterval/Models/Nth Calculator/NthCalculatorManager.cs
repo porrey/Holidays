@@ -14,9 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -87,7 +84,7 @@ namespace Innovative.DateInterval
 										   tbl.N.Contains(n)
 										   select tbl;
 
-			returnValue = (qry.Count() > 0);
+			returnValue = qry.Count() > 0;
 
 			return returnValue;
 		}
@@ -106,7 +103,7 @@ namespace Innovative.DateInterval
 
 			if (qry.Count() == 1)
 			{
-				if ((qry.Single().N.Contains(n) || n == -1))
+				if (qry.Single().N.Contains(n) || n == -1)
 				{
 					if (qry.First().INthCalculator != null)
 					{

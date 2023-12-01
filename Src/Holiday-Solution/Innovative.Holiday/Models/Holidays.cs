@@ -14,9 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace Innovative.Holiday
 {
 	/// <summary>
@@ -46,7 +43,7 @@ namespace Innovative.Holiday
 		public static Task RegisterAsync(IHoliday holiday)
 		{
 			Holidays.Register(holiday);
-			return Task.FromResult(0);
+			return Task.CompletedTask;
 		}
 
 		/// <summary>
@@ -65,7 +62,7 @@ namespace Innovative.Holiday
 		public static Task RegisterAsync(IEnumerable<IHoliday> holidays)
 		{
 			Holidays.Register(holidays);
-			return Task.FromResult(0);
+			return Task.CompletedTask;
 		}
 
 		/// <summary>
@@ -84,7 +81,7 @@ namespace Innovative.Holiday
 		public static Task RegisterAsync(params IEnumerable<IHoliday>[] holidays)
 		{
 			Holidays.Register(holidays);
-			return Task.FromResult(0);
+			return Task.CompletedTask;
 		}
 	}
 }

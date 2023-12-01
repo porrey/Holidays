@@ -14,7 +14,8 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
+// Ignore Spelling: Cinco
+
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +24,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("5/5");
 
-		protected override DateTime OnGetDateTime(int index)=>_calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "A celebration of Mexican culture by Mexican-Americans living in the United States. It celebrates the defeat of the French army during the Battle of Puebla (Batalla de Puebla) in Mexico on May 5, 1862.";
 		public override string Name => "Cinco de Mayo";
 		public override string ObservanceRule => "May 5th";

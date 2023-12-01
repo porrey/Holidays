@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using Innovative.DateInterval;
 
 namespace Innovative.Holiday
@@ -23,7 +22,7 @@ namespace Innovative.Holiday
 	{
 		private readonly IDateTimeInterval _calculator = new DayOfYear("3/8");
 
-		protected override DateTime OnGetDateTime(int index)=> _calculator[index];
+		protected override DateTime OnGetDateTime(int index) => this._calculator[index];
 		public override string Description => "Clocks were turned forward 1 hour from 2:00 am to 3:00 am";
 		public override string Name => "Start of Daylight Savings Time";
 		public override string ObservanceRule => "March 8th";

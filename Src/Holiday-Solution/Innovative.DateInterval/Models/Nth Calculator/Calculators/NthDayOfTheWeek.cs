@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -27,7 +25,7 @@ namespace Innovative.DateInterval
 			this.ValidCombinations = new Combination[]
 			{		
 				// The Week, Day, 1 - 7 (example: 6th Day of the Week)
-				new Combination() { Period = Period.The_Week, Division = Division.Day, N = Enumerable.Range(1, 7), INthCalculator = this }
+				new() { Period = Period.The_Week, Division = Division.Day, N = Enumerable.Range(1, 7), INthCalculator = this }
 			};
 		}
 
@@ -38,7 +36,7 @@ namespace Innovative.DateInterval
 			//
 			// Calculate the difference in days between today and n
 			//
-			int difference = ((int)returnValue.DayOfWeek - n) + 1;
+			int difference = (int)returnValue.DayOfWeek - n + 1;
 
 			//
 			// Adjust the current day by the day difference

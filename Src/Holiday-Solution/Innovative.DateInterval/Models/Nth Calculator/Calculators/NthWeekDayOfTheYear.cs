@@ -14,8 +14,6 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Linq;
 using Innovative.SystemTime;
 
 namespace Innovative.DateInterval
@@ -27,13 +25,13 @@ namespace Innovative.DateInterval
 			this.ValidCombinations = new Combination[]
 			{		
 				// The Year, Specific Day, 1 - 52 (example: 25th Monday of the Year)
-				new Combination() { Period = Period.The_Year, Division = Division.Sunday, N = Enumerable.Range(1, 52), INthCalculator = this },
-				new Combination() { Period = Period.The_Year, Division = Division.Monday, N = Enumerable.Range(1, 52), INthCalculator = this },
-				new Combination() { Period = Period.The_Year, Division = Division.Tuesday, N = Enumerable.Range(1, 52), INthCalculator = this },
-				new Combination() { Period = Period.The_Year, Division = Division.Wednesday, N = Enumerable.Range(1, 52), INthCalculator = this },
-				new Combination() { Period = Period.The_Year, Division = Division.Thursday, N = Enumerable.Range(1, 52), INthCalculator = this },
-				new Combination() { Period = Period.The_Year, Division = Division.Friday, N = Enumerable.Range(1, 52), INthCalculator = this },
-				new Combination() { Period = Period.The_Year, Division = Division.Saturday, N = Enumerable.Range(1, 52), INthCalculator = this }
+				new() { Period = Period.The_Year, Division = Division.Sunday, N = Enumerable.Range(1, 52), INthCalculator = this },
+				new() { Period = Period.The_Year, Division = Division.Monday, N = Enumerable.Range(1, 52), INthCalculator = this },
+				new() { Period = Period.The_Year, Division = Division.Tuesday, N = Enumerable.Range(1, 52), INthCalculator = this },
+				new() { Period = Period.The_Year, Division = Division.Wednesday, N = Enumerable.Range(1, 52), INthCalculator = this },
+				new() { Period = Period.The_Year, Division = Division.Thursday, N = Enumerable.Range(1, 52), INthCalculator = this },
+				new() { Period = Period.The_Year, Division = Division.Friday, N = Enumerable.Range(1, 52), INthCalculator = this },
+				new() { Period = Period.The_Year, Division = Division.Saturday, N = Enumerable.Range(1, 52), INthCalculator = this }
 			};
 		}
 
@@ -54,7 +52,7 @@ namespace Innovative.DateInterval
 			//
 			// Calculate the difference in days between today and n
 			//
-			int difference = ((int)returnValue.DayOfWeek - dayofweek);
+			int difference = (int)returnValue.DayOfWeek - dayofweek;
 
 			//
 			// Adjust the current day by the day difference
@@ -94,7 +92,7 @@ namespace Innovative.DateInterval
 			//
 			// Index adds/removes 52 weeks
 			//
-			int numberOfDays = (52 * 7) * index;
+			int numberOfDays = 52 * 7 * index;
 			returnValue = next.AddDays(numberOfDays).SetTime(next.TimeOfDay);
 
 			return returnValue;

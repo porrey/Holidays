@@ -14,9 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace Innovative.DateInterval
@@ -91,26 +89,26 @@ namespace Innovative.DateInterval
 
 			public Enumerator(IDateTimeInterval dateTimeInterval)
 			{
-				_dateTimeInterval = dateTimeInterval;
+				this._dateTimeInterval = dateTimeInterval;
 			}
 
 			public object Current
 			{
 				get
 				{
-					return _dateTimeInterval[_index];
+					return this._dateTimeInterval[this._index];
 				}
 			}
 
 			public bool MoveNext()
 			{
-				_index++;
-				return (_index < ((IReadOnlyList<DateTime>)_dateTimeInterval).Count);
+				this._index++;
+				return this._index < ((IReadOnlyList<DateTime>)this._dateTimeInterval).Count;
 			}
 
 			public void Reset()
 			{
-				_index = 0;
+				this._index = 0;
 			}
 		}
 
@@ -121,14 +119,14 @@ namespace Innovative.DateInterval
 
 			public Enumerator2(IDateTimeInterval dateTimeInterval)
 			{
-				_dateTimeInterval = dateTimeInterval;
+				this._dateTimeInterval = dateTimeInterval;
 			}
 
 			public DateTime Current
 			{
 				get
 				{
-					return _dateTimeInterval[_index];
+					return this._dateTimeInterval[this._index];
 				}
 			}
 
@@ -141,19 +139,19 @@ namespace Innovative.DateInterval
 			{
 				get
 				{
-					return _dateTimeInterval[_index];
+					return this._dateTimeInterval[this._index];
 				}
 			}
 
 			public bool MoveNext()
 			{
-				_index++;
-				return (_index < ((IReadOnlyList<DateTime>)_dateTimeInterval).Count);
+				this._index++;
+				return this._index < ((IReadOnlyList<DateTime>)this._dateTimeInterval).Count;
 			}
 
 			public void Reset()
 			{
-				_index = 0;
+				this._index = 0;
 			}
 		}
 		#endregion
@@ -191,9 +189,9 @@ namespace Innovative.DateInterval
 		{
 			int returnValue = -1;
 
-			if (obj is IDateTimeInterval)
+			if (obj is IDateTimeInterval interval)
 			{
-				returnValue = ((IDateTimeInterval)obj).NextDateTime.CompareTo(this.NextDateTime);
+				returnValue = interval.NextDateTime.CompareTo(this.NextDateTime);
 			}
 
 			return returnValue;
@@ -209,6 +207,7 @@ namespace Innovative.DateInterval
 			return this.NextDateTime.ToString(format, formatProvider);
 		}
 
+		[Obsolete("Formatter-based serialization is obsolete and should not be used.", DiagnosticId = "SYSLIB0050", UrlFormat = "https://aka.ms/dotnet-warnings/{0}")]
 		public void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
 			((ISerializable)this.NextDateTime).GetObjectData(info, context);

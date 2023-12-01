@@ -14,11 +14,8 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program. If not, see http://www.gnu.org/licenses/.
 //
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
-using System.Linq;
 
 namespace Innovative.DateInterval
 {
@@ -28,12 +25,12 @@ namespace Innovative.DateInterval
 	{
 		public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
 		{
-			return (sourceType == typeof(string));
+			return sourceType == typeof(string);
 		}
 
 		public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
 		{
-			return (destinationType == typeof(T));
+			return destinationType == typeof(T);
 		}
 
 		public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
@@ -44,7 +41,7 @@ namespace Innovative.DateInterval
 			{
 				returnValue = ((IDateTimeIntervalStringConverter<T>)returnValue).ToString();
 			}
-			
+
 			return returnValue;
 		}
 
@@ -54,7 +51,7 @@ namespace Innovative.DateInterval
 
 			if (value.GetType() == typeof(T))
 			{
-				returnValue = ((IDateTimeIntervalStringConverter<T>)value).ConvertFromString((string)value);				
+				returnValue = ((IDateTimeIntervalStringConverter<T>)value).ConvertFromString((string)value);
 			}
 
 			return returnValue;
