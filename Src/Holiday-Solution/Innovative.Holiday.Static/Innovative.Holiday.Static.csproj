@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>Daniel M. Porrey</Authors>
+		<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/porrey/Holidays</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/porrey/Holidays</RepositoryUrl>
+		<Copyright>Copyright © 2013-2024</Copyright>
+		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<Description>Provides static methods for determining holidays on date values.</Description>
+		<PackageIcon>holiday.png</PackageIcon>
+		<Version>8.1.1</Version>
+		<FileVersion>8.1.1</FileVersion>
+		<AssemblyVersion>8.1.1</AssemblyVersion>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Deterministic>true</Deterministic>
+		<ImplicitUsings>true</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DocumentationFile>Innovative.Holiday.Static.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Innovative.Holiday.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\..\Images\holiday.png">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
+	</ItemGroup>
+</Project>

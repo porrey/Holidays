@@ -18,6 +18,7 @@
     <ProjectReference Include="..\Innovative.Holiday.Extensions\Innovative.Holiday.Extensions.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Religious.Christian\Innovative.Holiday.Religious.Christian.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Seasons\Innovative.Holiday.Seasons.csproj" />
+    <ProjectReference Include="..\Innovative.Holiday.Static\Innovative.Holiday.Static.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Us.Federal\Innovative.Holiday.Us.Federal.csproj" />
     <ProjectReference Include="..\Innovative.Holiday.Us.Other\Innovative.Holiday.Us.Other.csproj" />
   </ItemGroup>

@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Religiou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.FederalRule", "Innovative.Holiday.Us.FederalRule\Innovative.Holiday.Us.FederalRule.csproj", "{C430EF21-49D7-4B4E-953C-DA31B91BAA0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Holiday.Extensions", "Innovative.Holiday.Extensions\Innovative.Holiday.Extensions.csproj", "{CA7697B2-A754-426D-A9BC-E316037672AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Extensions", "Innovative.Holiday.Extensions\Innovative.Holiday.Extensions.csproj", "{CA7697B2-A754-426D-A9BC-E316037672AB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Static", "Innovative.Holiday.Static\Innovative.Holiday.Static.csproj", "{5D050F11-5737-4EE4-B840-C2A33AFEE35E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{CA7697B2-A754-426D-A9BC-E316037672AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA7697B2-A754-426D-A9BC-E316037672AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA7697B2-A754-426D-A9BC-E316037672AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

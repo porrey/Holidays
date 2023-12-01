@@ -10,11 +10,11 @@
 		<Copyright>Copyright © 2013-2024</Copyright>
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
-		<Description>Provides the base classes for holiday definitions. The holidays use date intervals and rules to calculate past and future ocurrences of each holiday.</Description>
+		<Description>Provides the base classes for holiday definitions. The holidays use date intervals and rules to calculate past and future occurrences of each holiday.</Description>
 		<PackageIcon>holiday.png</PackageIcon>
-		<Version>8.1.0</Version>
-		<FileVersion>8.1.0</FileVersion>
-		<AssemblyVersion>8.1.0</AssemblyVersion>
+		<Version>8.1.1</Version>
+		<FileVersion>8.1.1</FileVersion>
+		<AssemblyVersion>8.1.1</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>

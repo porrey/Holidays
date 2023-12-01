@@ -16,6 +16,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Innovative.Holiday.Dst\Innovative.Holiday.Dst.csproj" />
+		<ProjectReference Include="..\Innovative.Holiday.Static\Innovative.Holiday.Static.csproj" />
 	</ItemGroup>
 
 </Project>
