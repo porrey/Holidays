@@ -12,9 +12,9 @@
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Provides a set of holiday definitions for US holidays.</Description>
 		<PackageIcon>holiday-us-other.png</PackageIcon>
-		<Version>8.1.0</Version>
-		<FileVersion>8.1.0</FileVersion>
-		<AssemblyVersion>8.1.0</AssemblyVersion>
+		<Version>8.1.2</Version>
+		<FileVersion>8.1.2</FileVersion>
+		<AssemblyVersion>8.1.2</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>

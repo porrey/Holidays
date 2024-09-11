@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Innovative.Tests.Shared;
 using NUnit.Framework;
 
 namespace Innovative.Holiday.Religious.Christian.Tests
@@ -43,7 +44,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void ChristmasTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new Christmas());
-			Assert.IsTrue(value.IsHoliday());
+            Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -51,7 +52,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void ChristmasYearTest(int year)
 		{
 			Christmas holiday = new Christmas();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -59,7 +60,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void ChristmasObservedTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new Christmas());
-			Assert.IsTrue(value.IsHoliday(HolidayOccurrenceType.Observed));
+            Assert2.IsTrue(value.IsHoliday(HolidayOccurrenceType.Observed));
 		}
 
 		[Test]
@@ -67,7 +68,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void ChristmasObservedYearTest(int year)
 		{
 			Christmas holiday = new Christmas();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -75,7 +76,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void ChristmasEveTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new ChristmasEve());
-			Assert.IsTrue(value.IsHoliday());
+            Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -83,7 +84,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void ChristmasEveYearTest(int year)
 		{
 			ChristmasEve holiday = new ChristmasEve();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -91,7 +92,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void EasterTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new Easter());
-			Assert.IsTrue(value.IsHoliday());
+            Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -99,7 +100,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void EasterYearTest(int year)
 		{
 			Easter holiday = new Easter();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -107,7 +108,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void GoodFridayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new GoodFriday());
-			Assert.IsTrue(value.IsHoliday());
+            Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -115,7 +116,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void GoodFridayYearTest(int year)
 		{
 			GoodFriday holiday = new GoodFriday();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -123,7 +124,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void PalmSundayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new PalmSunday());
-			Assert.IsTrue(value.IsHoliday());
+            Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -131,7 +132,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void PalmSundayYearTest(int year)
 		{
 			PalmSunday holiday = new PalmSunday();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -139,7 +140,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void NationalDayOfPrayerTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new NationalDayOfPrayer());
-			Assert.IsTrue(value.IsHoliday());
+            Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -147,7 +148,7 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 		public void NationalDayOfPrayerYearTest(int year)
 		{
 			NationalDayOfPrayer holiday = new NationalDayOfPrayer();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+            Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 	}
 }

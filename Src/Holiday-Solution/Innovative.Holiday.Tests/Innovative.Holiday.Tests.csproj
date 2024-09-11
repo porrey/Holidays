@@ -3,15 +3,15 @@
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<IsPackable>false</IsPackable>
-		<Version>8.1.0</Version>
-		<FileVersion>8.1.0</FileVersion>
-		<AssemblyVersion>8.1.0</AssemblyVersion>
+		<Version>8.1.2</Version>
+		<FileVersion>8.1.2</FileVersion>
+		<AssemblyVersion>8.1.2</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="nunit" Version="3.14.0" />
-		<PackageReference Include="NUnit3TestAdapter" Version="4.5.0" />
-		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+		<PackageReference Include="nunit" Version="4.2.2" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,6 +19,7 @@
 		<ProjectReference Include="..\Innovative.Holiday.Us.FederalRule\Innovative.Holiday.Us.FederalRule.csproj" />
 		<ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
 		<ProjectReference Include="..\Innovative.Holiday.Static\Innovative.Holiday.Static.csproj" />
+		<ProjectReference Include="..\Innovative.Tests.Shared\Innovative.Tests.Shared.csproj" />
 	</ItemGroup>
 
 </Project>

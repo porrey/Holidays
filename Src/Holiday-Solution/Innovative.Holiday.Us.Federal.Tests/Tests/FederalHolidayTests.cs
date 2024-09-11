@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Innovative.Tests.Shared;
 using NUnit.Framework;
 
 namespace Innovative.Holiday.Us.Federal.Tests
@@ -32,8 +33,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -45,8 +46,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -58,8 +59,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -71,8 +72,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -84,8 +85,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -97,8 +98,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -110,8 +111,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -123,8 +124,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -136,8 +137,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -149,8 +150,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -165,8 +166,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(value.Actual, actual);
-				Assert.AreEqual(value.Observed, observed);
+				Assert2.AreEqual(value.Actual, actual);
+				Assert2.AreEqual(value.Observed, observed);
 			});
 		}
 
@@ -179,17 +180,17 @@ namespace Innovative.Holiday.Us.Federal.Tests
 			Assert.Multiple(() =>
 			{
 				DateTime dta = holiday.GetByYear(year);
-				Assert.AreEqual(year, dta.Year);
+				Assert2.AreEqual(year, dta.Year);
 
 				DateTime dto = holiday.GetObservedByYear(year);
 
 				if (dta.DayOfWeek == DayOfWeek.Saturday)
 				{
-					Assert.AreEqual(year - 1, dto.Year);
+					Assert2.AreEqual(year - 1, dto.Year);
 				}
 				else
 				{
-					Assert.AreEqual(year, dto.Year);
+					Assert2.AreEqual(year, dto.Year);
 				}
 			});
 		}
@@ -202,8 +203,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -215,8 +216,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -228,8 +229,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -241,8 +242,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 
@@ -254,8 +255,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
-				Assert.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
+				Assert2.IsTrue(value.Actual.IsHoliday(HolidayOccurrenceType.Actual));
+				Assert2.IsTrue(value.Observed.IsHoliday(HolidayOccurrenceType.Observed));
 			});
 		}
 
@@ -267,8 +268,8 @@ namespace Innovative.Holiday.Us.Federal.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(year, holiday.GetByYear(year).Year);
-				Assert.AreEqual(year, holiday.GetObservedByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+				Assert2.AreEqual(year, holiday.GetObservedByYear(year).Year);
 			});
 		}
 	}

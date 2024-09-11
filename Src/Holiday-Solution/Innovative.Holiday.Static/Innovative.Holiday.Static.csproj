@@ -12,9 +12,9 @@
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Provides static methods for determining holidays on date values.</Description>
 		<PackageIcon>holiday.png</PackageIcon>
-		<Version>8.1.1</Version>
-		<FileVersion>8.1.1</FileVersion>
-		<AssemblyVersion>8.1.1</AssemblyVersion>
+		<Version>8.1.2</Version>
+		<FileVersion>8.1.2</FileVersion>
+		<AssemblyVersion>8.1.2</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>

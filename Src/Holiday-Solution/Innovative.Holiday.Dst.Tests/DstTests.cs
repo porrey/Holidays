@@ -17,6 +17,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Innovative.Tests.Shared;
 using NUnit.Framework;
 
 namespace Innovative.Holiday.Dst.Tests
@@ -38,7 +39,7 @@ namespace Innovative.Holiday.Dst.Tests
 		public void StartDstTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new StartDst());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -46,7 +47,7 @@ namespace Innovative.Holiday.Dst.Tests
 		public void StartDstTest(int year)
 		{
 			StartDst holiday = new StartDst();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -54,7 +55,7 @@ namespace Innovative.Holiday.Dst.Tests
 		public void EndDstTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new EndDst());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -62,7 +63,7 @@ namespace Innovative.Holiday.Dst.Tests
 		public void EndDstYearTest(int year)
 		{
 			EndDst holiday = new EndDst();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 	}

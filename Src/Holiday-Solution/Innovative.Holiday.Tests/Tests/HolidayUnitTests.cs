@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Innovative.Holiday.Tests.Mocks;
+using Innovative.Tests.Shared;
 using NUnit.Framework;
 
 namespace Innovative.Holiday.Tests
@@ -43,8 +44,8 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(holidayDate.IsHoliday());
-				Assert.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
+                Assert2.IsTrue(holidayDate.IsHoliday());
+                Assert2.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
 			});
 		}
 
@@ -61,8 +62,8 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(holidayDate.IsHoliday());
-				Assert.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
+                Assert2.IsTrue(holidayDate.IsHoliday());
+                Assert2.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
 			});
 		}
 
@@ -79,8 +80,8 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(holidayDate.IsHoliday());
-				Assert.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
+                Assert2.IsTrue(holidayDate.IsHoliday());
+                Assert2.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
 			});
 		}
 
@@ -97,9 +98,9 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(holiday is IObservedHoliday);
-				Assert.IsTrue(holidayDate.IsHoliday());
-				Assert.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
+                Assert2.IsTrue(holiday is IObservedHoliday);
+                Assert2.IsTrue(holidayDate.IsHoliday());
+                Assert2.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
 			});
 		}
 
@@ -117,10 +118,10 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(holiday is IObservedHoliday);
-				Assert.IsTrue(holidayDate.IsHoliday());
-				Assert.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
-				Assert.AreEqual(holiday.NextObserved.Date, observedDate.Date);
+                Assert2.IsTrue(holiday is IObservedHoliday);
+                Assert2.IsTrue(holidayDate.IsHoliday());
+                Assert2.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
+                Assert2.AreEqual(holiday.NextObserved.Date, observedDate.Date);
 			});
 		}
 
@@ -138,10 +139,10 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.IsTrue(holiday is IObservedHoliday);
-				Assert.IsTrue(holidayDate.IsHoliday());
-				Assert.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
-				Assert.AreEqual(holiday.NextObserved.Date, observedDate.Date);
+                Assert2.IsTrue(holiday is IObservedHoliday);
+                Assert2.IsTrue(holidayDate.IsHoliday());
+				Assert2.AreEqual(holiday.NextDateTime.Date, holidayDate.Date);
+				Assert2.AreEqual(holiday.NextObserved.Date, observedDate.Date);
 			});
 		}
 
@@ -154,8 +155,8 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(1, list.Count());
-				Assert.AreEqual(holiday, list.First());
+				Assert2.AreEqual(1, list.Count());
+				Assert2.AreEqual(holiday, list.First());
 			});
 		}
 
@@ -172,9 +173,9 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(4, list.Count());
-				Assert.AreEqual(holiday1, list.First());
-				Assert.AreEqual(holiday4, list.Last());
+				Assert2.AreEqual(4, list.Count());
+				Assert2.AreEqual(holiday1, list.First());
+				Assert2.AreEqual(holiday4, list.Last());
 			});
 		}
 
@@ -188,7 +189,7 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(0, list.Count());
+				Assert2.AreEqual(0, list.Count());
 			});
 		}
 
@@ -200,8 +201,8 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(1, Holidays.MyHolidays.Count());
-				Assert.AreEqual(holiday, Holidays.MyHolidays.First());
+				Assert2.AreEqual(1, Holidays.MyHolidays.Count());
+				Assert2.AreEqual(holiday, Holidays.MyHolidays.First());
 			});
 		}
 
@@ -217,9 +218,9 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(4, Holidays.MyHolidays.Count());
-				Assert.AreEqual(holiday1, Holidays.MyHolidays.First());
-				Assert.AreEqual(holiday4, Holidays.MyHolidays.Last());
+				Assert2.AreEqual(4, Holidays.MyHolidays.Count());
+				Assert2.AreEqual(holiday1, Holidays.MyHolidays.First());
+				Assert2.AreEqual(holiday4, Holidays.MyHolidays.Last());
 			});
 		}
 
@@ -232,7 +233,7 @@ namespace Innovative.Holiday.Tests
 
 			Assert.Multiple(() =>
 			{
-				Assert.AreEqual(0, Holidays.MyHolidays.Count());
+				Assert2.AreEqual(0, Holidays.MyHolidays.Count());
 			});
 		}
 
@@ -252,7 +253,7 @@ namespace Innovative.Holiday.Tests
 			//
 			DateTimeOffset checkdate = DateTimeOffset.Now.NextDayOfWeek(DayOfWeek.Monday);
 
-			Assert.IsTrue(checkdate.IsHoliday());
+			Assert2.IsTrue(checkdate.IsHoliday());
 		}
 
 		[Test]
@@ -271,7 +272,7 @@ namespace Innovative.Holiday.Tests
 			//
 			DateTimeOffset checkdate = DateTimeOffset.Now.NextDayOfWeek(DayOfWeek.Monday);
 
-			Assert.AreSame(checkdate.GetHoliday().Single(), holiday);
+			Assert2.AreSame(checkdate.GetHoliday().Single(), holiday);
 		}
 
 		[Test]
@@ -290,7 +291,7 @@ namespace Innovative.Holiday.Tests
 			//
 			DateTime checkdate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
-			Assert.IsTrue(checkdate.IsHoliday(HolidayOccurrenceType.Actual));
+			Assert2.IsTrue(checkdate.IsHoliday(HolidayOccurrenceType.Actual));
 		}
 
 		[Test]
@@ -309,7 +310,7 @@ namespace Innovative.Holiday.Tests
 			//
 			DateTime checkdate = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday).Subtract(TimeSpan.FromDays(1));
 
-			Assert.IsTrue(checkdate.IsHoliday(HolidayOccurrenceType.Observed));
+			Assert2.IsTrue(checkdate.IsHoliday(HolidayOccurrenceType.Observed));
 		}
 
 		[Test]
@@ -329,8 +330,8 @@ namespace Innovative.Holiday.Tests
 			DateTime checkdate1 = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday).Subtract(TimeSpan.FromDays(1));
 			DateTime checkdate2 = DateTime.Now.NextDayOfWeek(DayOfWeek.Saturday);
 
-			Assert.IsTrue(checkdate1.IsHoliday(HolidayOccurrenceType.Any));
-			Assert.IsTrue(checkdate2.IsHoliday(HolidayOccurrenceType.Any));
+			Assert2.IsTrue(checkdate1.IsHoliday(HolidayOccurrenceType.Any));
+			Assert2.IsTrue(checkdate2.IsHoliday(HolidayOccurrenceType.Any));
 		}
 
 		public static IEnumerable<int> Years = new int[] { 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 };
@@ -341,7 +342,7 @@ namespace Innovative.Holiday.Tests
 		{
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday("1/1");
 			DateTime dateByYear = holiday.GetByYear(year);
-			Assert.AreEqual(dateByYear.Year, year);
+			Assert2.AreEqual(dateByYear.Year, year);
 		}
 
 		[Test]
@@ -350,7 +351,7 @@ namespace Innovative.Holiday.Tests
 		{
 			MockDayOfYearHoliday holiday = new MockDayOfYearHoliday("1/1");
 			DateTime dateByYear = holiday.GetByYear(year);
-			Assert.AreEqual(dateByYear.Year, year);
+			Assert2.AreEqual(dateByYear.Year, year);
 		}
 	}
 }
