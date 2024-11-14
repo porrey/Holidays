@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Innovative.Tests.Shared;
 using NUnit.Framework;
 
 namespace Innovative.Holiday.Us.Others.Tests
@@ -32,7 +33,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void AprilFoolsDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new AprilFoolsDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -40,7 +41,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void AprilFoolsDayYearTest(int year)
 		{
 			AprilFoolsDay holiday = new AprilFoolsDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -48,7 +49,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void ArmedForcesDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new ArmedForcesDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -56,7 +57,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void ArmedForcesDayYearTest(int year)
 		{
 			ArmedForcesDay holiday = new ArmedForcesDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -64,7 +65,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void CincoDeMayoTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new CincoDeMayo());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -72,7 +73,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void CincoDeMayoYearTest(int year)
 		{
 			CincoDeMayo holiday = new CincoDeMayo();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -80,7 +81,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void FathersDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new FathersDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -88,7 +89,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void FathersDayYearTest(int year)
 		{
 			FathersDay holiday = new FathersDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -96,7 +97,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void FlagDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new FlagDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -104,7 +105,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void FlagDayYearTest(int year)
 		{
 			FlagDay holiday = new FlagDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -112,7 +113,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void GroundhogDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new GroundhogDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -120,7 +121,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void GroundhogDayYearTest(int year)
 		{
 			GroundhogDay holiday = new GroundhogDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -128,7 +129,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void HalloweenTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new Halloween());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -136,7 +137,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void HalloweenYearTest(int year)
 		{
 			Halloween holiday = new Halloween();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -144,7 +145,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void JuneteenthTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new Juneteenth());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -152,7 +153,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void JuneteenthYearTest(int year)
 		{
 			Juneteenth holiday = new Juneteenth();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -160,7 +161,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void MothersDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new MothersDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -168,7 +169,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void MothersDayYearTest(int year)
 		{
 			MothersDay holiday = new MothersDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -176,7 +177,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void NewYearsEveTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new NewYearsEve());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -184,7 +185,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void NewYearsEveYearTest(int year)
 		{
 			NewYearsEve holiday = new NewYearsEve();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -192,7 +193,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void SaintPatricksDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new SaintPatricksDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -200,7 +201,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void SaintPatricksDayYearTest(int year)
 		{
 			SaintPatricksDay holiday = new SaintPatricksDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 
 		[Test]
@@ -208,7 +209,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void ValentinesDayTest(DateTime value)
 		{
 			Holidays.MyHolidays.Add(new ValentinesDay());
-			Assert.IsTrue(value.IsHoliday());
+			Assert2.IsTrue(value.IsHoliday());
 		}
 
 		[Test]
@@ -216,7 +217,7 @@ namespace Innovative.Holiday.Us.Others.Tests
 		public void ValentinesDayYearTest(int year)
 		{
 			ValentinesDay holiday = new ValentinesDay();
-			Assert.AreEqual(year, holiday.GetByYear(year).Year);
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
 	}
 }
