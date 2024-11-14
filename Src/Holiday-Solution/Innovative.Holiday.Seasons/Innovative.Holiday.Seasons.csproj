@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<Authors>Daniel M. Porrey</Authors>
@@ -10,9 +10,9 @@
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description></Description>
-		<Version>8.1.0</Version>
-		<FileVersion>8.1.0</FileVersion>
-		<AssemblyVersion>8.1.0</AssemblyVersion>
+		<Version>9.0.0</Version>
+		<FileVersion>9.0.0</FileVersion>
+		<AssemblyVersion>9.0.0</AssemblyVersion>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
