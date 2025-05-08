@@ -11,9 +11,9 @@
 		<RepositoryType>git</RepositoryType>
 		<NeutralLanguage>en-US</NeutralLanguage>
 		<Description>Defines date intervals for daylight savings start and end dates.</Description>
-		<Version>9.0.0</Version>
-		<FileVersion>9.0.0</FileVersion>
-		<AssemblyVersion>9.0.0</AssemblyVersion>
+		<Version>9.0.1</Version>
+		<FileVersion>9.0.1</FileVersion>
+		<AssemblyVersion>9.0.1</AssemblyVersion>
 		<PackageIcon>holiday-dst.png</PackageIcon>
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
