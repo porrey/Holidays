@@ -1,0 +1,58 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Authors>Daniel M. Porrey</Authors>
+		<PackageLicenseExpression>LGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/porrey/Holidays</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/porrey/Holidays</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<Description></Description>
+		<Version>10.0.0</Version>
+		<FileVersion>10.0.0</FileVersion>
+		<AssemblyVersion>10.0.0</AssemblyVersion>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Deterministic>true</Deterministic>
+		<ImplicitUsings>true</ImplicitUsings>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<NoWarn>1701;1702;1591</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DocumentationFile>Innovative.Holiday.Seasons.xml</DocumentationFile>
+		<GenerateDocumentationFile>False</GenerateDocumentationFile>
+		<PackageIcon>holiday.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Copyright>Copyright © 2013-2025</Copyright>
+		<AssemblyTitle>Holiday Seasons</AssemblyTitle>
+		<Title>Holiday Seasons</Title>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="Innovative.Holiday.Seasons.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\Images\holiday.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Innovative.DateInterval\Innovative.DateInterval.csproj" />
+		<ProjectReference Include="..\Innovative.Holiday\Innovative.Holiday.csproj" />
+	</ItemGroup>
+</Project>

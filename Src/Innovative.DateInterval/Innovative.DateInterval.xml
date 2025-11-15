@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Innovative.DateInterval</name>
+    </assembly>
+    <members>
+        <member name="T:Innovative.DateInterval.ExceptionMessages">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Innovative.DateInterval.ExceptionMessages.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Innovative.DateInterval.ExceptionMessages.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Innovative.DateInterval.ExceptionMessages.NthCalculatorInvalidCombinationException">
+            <summary>
+              Looks up a localized string similar to The combination of Ordinal, Division and Period is invalid..
+            </summary>
+        </member>
+        <member name="P:Innovative.DateInterval.ExceptionMessages.NthCalculatorMissingException">
+            <summary>
+              Looks up a localized string similar to The combination of Ordinal, Division and Period is valid but the calculator was not loaded..
+            </summary>
+        </member>
+        <member name="P:Innovative.DateInterval.ExceptionMessages.NthCalculatorOrdinalException">
+            <summary>
+              Looks up a localized string similar to The ordinal specified is out of range..
+            </summary>
+        </member>
+        <member name="M:Innovative.DateInterval.DateTimeInterval.ToString">
+            <summary>
+            Returns a string that represents the current object.
+            </summary>
+            <returns>A string that represents the current object.</returns>
+        </member>
+        <member name="M:Innovative.DateInterval.NthParser.DayOfWeekCount(System.DayOfWeek,System.Int32,System.Int32)">
+            <summary>
+            Returns the count of the occurrences a given DayOfWeek in a 
+            month of a particular year
+            </summary>
+            <param name="day"></param>
+            <param name="month"></param>
+            <param name="year"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
