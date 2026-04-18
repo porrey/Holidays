@@ -12,8 +12,8 @@ Reference: [https://www.timeanddate.com/holidays](https://www.timeanddate.com/ho
 | Package | Description |
 |---|---|
 | [`Innovative.Holiday`](https://www.nuget.org/packages/Innovative.Holiday) | Core holiday abstractions, base classes, and the global `Holidays` registry |
-| [`Innovative.Holiday.Us.Federal`](https://www.nuget.org/packages/Innovative.Holiday.Us.Federal) | 9 US federal public holidays |
-| [`Innovative.Holiday.Us.Other`](https://www.nuget.org/packages/Innovative.Holiday.Us.Other) | ~13 additional US observances |
+| [`Innovative.Holiday.Us.Federal`](https://www.nuget.org/packages/Innovative.Holiday.Us.Federal) | 9 US federal public holidays (per OPM schedule) |
+| [`Innovative.Holiday.Us.Other`](https://www.nuget.org/packages/Innovative.Holiday.Us.Other) | 12 additional US observances |
 | [`Innovative.Holiday.Religious.Christian`](https://www.nuget.org/packages/Innovative.Holiday.Religious.Christian) | Christian holidays (Easter, Christmas, Good Friday, etc.) |
 | [`Innovative.Holiday.Dst`](https://www.nuget.org/packages/Innovative.Holiday.Dst) | Daylight Saving Time start/end events |
 | [`Innovative.Holiday.Static`](https://www.nuget.org/packages/Innovative.Holiday.Static) | `DateTime` / `DateTimeOffset` extension methods |
@@ -143,6 +143,8 @@ Console.WriteLine($"2030 observed: {observed2030.ToLongDateString()}");
 
 ### US Federal Holidays (`Innovative.Holiday.Us.Federal`)
 
+This package contains the 9 holidays recognized on the official [OPM federal pay schedule](https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/). Note that Juneteenth National Independence Day is included in `Innovative.Holiday.Us.Other`, and Christmas Day is included in `Innovative.Holiday.Religious.Christian`.
+
 | Holiday | Rule |
 |---|---|
 | New Year's Day | January 1 |
@@ -159,7 +161,7 @@ All US federal holidays apply the **federal observance rule**: if the holiday fa
 
 ### Other US Holidays (`Innovative.Holiday.Us.Other`)
 
-Groundhog Day, Valentine's Day, St. Patrick's Day, April Fools' Day, Cinco de Mayo, Mother's Day, Armed Forces Day, Flag Day, Father's Day, Juneteenth, Halloween, and New Year's Eve.
+April Fools' Day, Armed Forces Day, Cinco de Mayo, Father's Day, Flag Day, Groundhog Day, Halloween, Juneteenth, Mother's Day, New Year's Eve, St. Patrick's Day, and Valentine's Day.
 
 ### Christian Holidays (`Innovative.Holiday.Religious.Christian`)
 
