@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Us.Feder
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Extensions", "Innovative.Holiday.Extensions\Innovative.Holiday.Extensions.csproj", "{CA7697B2-A754-426D-A9BC-E316037672AB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Extensions.Tests", "Innovative.Holiday.Extensions.Tests\Innovative.Holiday.Extensions.Tests.csproj", "{D4E8F123-5A91-4B2C-9F6D-8C7E3A021B45}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Innovative.Holiday.Static", "Innovative.Holiday.Static\Innovative.Holiday.Static.csproj", "{5D050F11-5737-4EE4-B840-C2A33AFEE35E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Innovative.Tests.Shared", "Innovative.Tests.Shared\Innovative.Tests.Shared.csproj", "{2A587DA2-91C1-425D-BAAE-8399651C90BD}"
@@ -111,6 +113,10 @@ Global
 		{CA7697B2-A754-426D-A9BC-E316037672AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA7697B2-A754-426D-A9BC-E316037672AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA7697B2-A754-426D-A9BC-E316037672AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4E8F123-5A91-4B2C-9F6D-8C7E3A021B45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4E8F123-5A91-4B2C-9F6D-8C7E3A021B45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4E8F123-5A91-4B2C-9F6D-8C7E3A021B45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4E8F123-5A91-4B2C-9F6D-8C7E3A021B45}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D050F11-5737-4EE4-B840-C2A33AFEE35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -130,6 +136,7 @@ Global
 		{F83E489B-E0D7-4940-99B0-30F91667AB77} = {0976512C-8CBA-43DD-ACA6-78F03FA50550}
 		{6F8F7477-3568-4F33-A373-D6A7FECBFA39} = {0976512C-8CBA-43DD-ACA6-78F03FA50550}
 		{2A587DA2-91C1-425D-BAAE-8399651C90BD} = {0976512C-8CBA-43DD-ACA6-78F03FA50550}
+		{D4E8F123-5A91-4B2C-9F6D-8C7E3A021B45} = {0976512C-8CBA-43DD-ACA6-78F03FA50550}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2CDBFE6-FE0F-48E2-96EC-650CFC482814}

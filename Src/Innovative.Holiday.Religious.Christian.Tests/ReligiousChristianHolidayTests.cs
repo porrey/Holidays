@@ -150,5 +150,44 @@ namespace Innovative.Holiday.Religious.Christian.Tests
 			NationalDayOfPrayer holiday = new NationalDayOfPrayer();
             Assert2.AreEqual(year, holiday.GetByYear(year).Year);
 		}
+
+		public static IEnumerable<DateTime> EasterSundayDays = new DateTime[] { new DateTime(2019, 4, 21), new DateTime(2020, 4, 12), new DateTime(2021, 4, 4) };
+
+		[Test]
+		[TestCaseSource("EasterSundayDays")]
+		[System.Obsolete]
+		public void EasterSundayDeprecatedTest(DateTime value)
+		{
+			Holidays.MyHolidays.Add(new EasterSunday());
+			Assert2.IsTrue(value.IsHoliday());
+		}
+
+		[Test]
+		[TestCaseSource("Years")]
+		[System.Obsolete]
+		public void EasterSundayDeprecatedYearTest(int year)
+		{
+			EasterSunday holiday = new EasterSunday();
+			Assert2.AreEqual(year, holiday.GetByYear(year).Year);
+		}
+
+		public static IEnumerable<(int Year, int Month, int Day)> EasterCalculatorDates = new (int, int, int)[]
+		{
+			(2019, 4, 21),
+			(2020, 4, 12),
+			(2021, 4, 4),
+			(2022, 4, 17),
+			(2023, 4, 9),
+			(2024, 3, 31)
+		};
+
+		[Test]
+		[TestCaseSource("EasterCalculatorDates")]
+		public void EasterSundayCalculatorTest((int Year, int Month, int Day) value)
+		{
+			EasterSundayCalculator calculator = new EasterSundayCalculator(value.Year);
+			DateTime expected = new DateTime(value.Year, value.Month, value.Day);
+			Assert2.AreEqual(expected, calculator.Date);
+		}
 	}
 }

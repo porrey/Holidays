@@ -104,7 +104,7 @@ namespace Innovative.Holiday.Extensions
 
 		public Task<bool> IsHolidayAsync(DateTime? value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
 		{
-			return Task.FromResult(this.IsHoliday(value.Value, holidayOccurrenceType));
+			return Task.FromResult(this.IsHoliday(value, holidayOccurrenceType));
 		}
 
 		public IEnumerable<IHoliday> GetHoliday(DateTimeOffset value, HolidayOccurrenceType holidayOccurrenceType = HolidayOccurrenceType.Actual)
